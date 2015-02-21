@@ -3,4 +3,4 @@
 *.zip
 production/*
 *.db
-db_repository/
+database/repo

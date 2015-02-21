@@ -7,6 +7,7 @@ Prerequisite: Flask server must be running.
 
 from dev import app, db, models, loader
 from flask import request, redirect, url_for
+from datetime import datetime
 
 @app.route('/')
 def viewIndex():
@@ -74,5 +75,7 @@ def viewSample():
 @app.route('/submit', methods=['POST'])
 def submit():
     text = request.args.get('q')
-    print text
+    story = models.Stories(date=datetime.now(), text=text, approval=False)
+    db.session.add(story)
+    db.session.commit()
     return 'Permission Denied'

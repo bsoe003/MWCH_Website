@@ -12,7 +12,10 @@ class Stories(db.Model):
     text = db.Column(db.Text)
     approval = db.Column(db.Boolean)
 
-    def __str__(self):
+    def __repr__(self):
         result ='Entry #%s\nDate: %s\nApproved: %s\n\n%s' \
             % (str(self.id),str(self.date),str(self.approval),str(text))
         return result
+
+    def __str__(self):
+        return self.__repr__
