@@ -10,7 +10,8 @@ from flask import request, redirect, render_template
 
 @app.route('/')
 def viewIndex():
-    return render_template('index.html')
+    #return app.send_static_file('index.html')
+    return render_template('index.html', level=0)
 
 @app.route('/about')
 def viewAbout():
@@ -18,15 +19,15 @@ def viewAbout():
 
 @app.route('/about/background')
 def viewBackground():
-    return 'Background & History'
+    return render_template('about/background.html', level=1)
 
 @app.route('/about/muiristas')
 def viewMuiristas():
-    return 'Muiristas'
+    return render_template('about/muiristas.html', level=1)
 
 @app.route('/about/sources')
 def viewSources():
-    return 'Where We Source From'
+    return render_template('about/sources.html', level=1)
 
 @app.route('/menu')
 def viewMenu():
@@ -34,23 +35,27 @@ def viewMenu():
 
 @app.route('/menu/regular')
 def viewRegular():
-    return 'Regular Drinks'
+    return render_template('menu/regular.html', level=1)
 
 @app.route('/menu/blended_iced')
 def viewBlended():
-    return 'Blended & Iced Drinks'
+    return render_template('menu/blended.html', level=1)
 
 @app.route('/menu/pastries')
 def viewPastries():
-    return 'Pastries'
+    return render_template('menu/pastries.html', level=1)
 
 @app.route('/stories')
 def viewStories():
-    return 'Stories'
+    return render_template('stories.html', level=0)
 
 @app.route('/gallery')
 def viewGallery():
-    return 'Gallery'
+    return render_template('gallery.html', level=0)
+
+@app.route('/sample')
+def viewSample():
+    return render_template('sample.html', level=0)
 
 @app.route('/submit', methods=['POST'])
 def submit():

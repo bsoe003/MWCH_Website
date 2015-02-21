@@ -10,6 +10,10 @@ import urllib2
 import subprocess
 import sys
 import os
+import re
+
+orig_prettify = BeautifulSoup.prettify
+r = re.compile(r'^(\s*)', re.MULTILINE)
 
 routes = ['',
     'about/background', 'about/muiristas', 'about/sources',
@@ -18,6 +22,10 @@ routes = ['',
     'gallery']
 root = 'production/'
 static = 'dev/static/'
+
+def prettify(self, encoding=None, formatter="minimal", indent_width=4):
+    return r.sub(r'\1' * indent_width,
+        orig_prettify(self, encoding, formatter))
 
 def clean():
     for files in os.listdir('.'):
@@ -57,7 +65,7 @@ def zip_files(name='protoype'):
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == 'clean':
         prompt = '\033[93m[WARNING]\033[0m This will delete all production files. Are you sure? '
-        answer = raw_input(prompt).lower()
+        answer = raw_input(prompt).lower().strip()
         if not answer or answer == 'yes' or answer == 'y':
             clean()
             print 'All production files removed successfully'
@@ -74,6 +82,7 @@ if __name__ == '__main__':
     file_transfer()
     sys.stdout.write('\033[92mDONE\033[0m\n')
     sys.stdout.write('Transferring from routes to production ... ')
+    BeautifulSoup.prettify = prettify
     for route in routes:
         route_transfer(host,route)
     sys.stdout.write('\033[92mDONE\033[0m\n')
