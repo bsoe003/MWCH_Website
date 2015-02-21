@@ -3,3 +3,4 @@
 *.zip
 production/*
 *.db
+db_repository/

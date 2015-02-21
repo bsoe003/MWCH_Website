@@ -10,7 +10,6 @@ from flask import request, redirect, url_for
 
 @app.route('/')
 def viewIndex():
-    #return app.send_static_file('index.html')
     return render_template('index.html', level=0)
 
 @app.route('/about')
@@ -23,7 +22,10 @@ def viewBackground():
 
 @app.route('/about/muiristas')
 def viewMuiristas():
-    return render_template('about/muiristas.html', level=1)
+    data = loader.load('about_muiristas.csv')
+    return render_template('about/muiristas.html', 
+        level=1,
+        muiristas=data)
 
 @app.route('/about/sources')
 def viewSources():
@@ -35,15 +37,24 @@ def viewMenu():
 
 @app.route('/menu/regular')
 def viewRegular():
-    return render_template('menu/regular.html', level=1)
+    data = loader.load('menu_regular.csv')
+    return render_template('menu/regular.html', 
+        level=1,
+        menu=data)
 
 @app.route('/menu/blended_iced')
 def viewBlended():
-    return render_template('menu/blended.html', level=1)
+    data = loader.load('menu_blended.csv')
+    return render_template('menu/blended.html', 
+        level=1,
+        menu=data)
 
 @app.route('/menu/pastries')
 def viewPastries():
-    return render_template('menu/pastries.html', level=1)
+    data = loader.load('menu_pastries.csv')
+    return render_template('menu/pastries.html', 
+        level=1,
+        menu=data)
 
 @app.route('/stories')
 def viewStories():
@@ -51,7 +62,10 @@ def viewStories():
 
 @app.route('/gallery')
 def viewGallery():
-    return render_template('gallery.html', level=0)
+    data = loader.load('gallery_photos.csv')
+    return render_template('gallery.html',
+        level=0,
+        gallery=data)
 
 @app.route('/sample')
 def viewSample():
