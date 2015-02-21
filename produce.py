@@ -42,6 +42,8 @@ def route_transfer(host,route):
     path = root+'pages/'
     text = urllib2.urlopen(host+route).read()
     soup = BeautifulSoup(text).prettify()
+    soup = soup.replace('<link href="','<link href="../')
+    soup = soup.replace('<script type="text/javascript" src="', '<script type="text/javascript" src="../')
     filename = path+'index.html' if not route else path+route+'.html'
     try:
         html = open(filename,'w')
