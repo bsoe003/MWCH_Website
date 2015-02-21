@@ -1,0 +1,21 @@
+from flask import Flask, request
+import sys
+
+#save = len(sys.argv) > 1 and sys.argv[1] == 'save'
+#status = '\033[92mON\033[0m' if save else '\033[91mOFF\033[0m'
+#print 'Save Option: ' + status
+
+app = Flask(__name__)
+
+@app.route('/')
+def index():
+    return 'Hello World!'
+
+@app.route('/submit', methods=['POST'])
+def submit():
+    text = request.args.get('q')
+    print text
+    return 'Permission Denied'
+
+if __name__ == '__main__':
+    app.run()
