@@ -5,7 +5,7 @@ Description: List and defines all functionality of routes.
 Prerequisite: Flask server must be running.
 """
 
-from dev import app
+from dev import app, db, models, loader
 from flask import request, redirect, url_for
 
 @app.route('/')
