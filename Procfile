@@ -1,1 +1,1 @@
-python start
+python server.py

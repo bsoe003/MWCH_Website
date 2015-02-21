@@ -1,0 +1,27 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        {% block css %}
+        <!-- Include All CSS Files here -->
+        <link rel="stylesheet" href="{% if level==1 %}../{% endif %}css/style.css" />
+        {% endblock %}
+
+        {% block js %}
+        <!-- Include All JavaScript Files here -->
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
+        <script type="text/javascript" src="{% if level==1 %}../{% endif %}js/script.js"></script>
+        <title>Muir Woods Coffee House</title>
+        {% endblock %}
+    </head>
+    <body>
+        <!-- Navigation Bar here -->
+        <header></header>
+
+        <!-- Substituable Contents here -->
+        <div id="content">{% block content %}{% endblock %}</div>
+
+        <!-- Footer here -->
+        <footer></footer>
+    </body>
+</html>
