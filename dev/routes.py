@@ -6,11 +6,11 @@ Prerequisite: Flask server must be running.
 """
 
 from dev import app
-from flask import request, redirect, url_for
+from flask import request, redirect, render_template
 
 @app.route('/')
 def viewIndex():
-    return 'Home'
+    return render_template('index.html')
 
 @app.route('/about')
 def viewAbout():
