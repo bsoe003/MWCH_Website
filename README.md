@@ -31,21 +31,25 @@ To kill the server, simply press "**ctrl**+**c**"
 
 ### Routes (Tentative)
 The following are available routes for this website:
-* /
-* /about/background
-* /about/muiristas
-* /about/sources
-* /menu/blended
-* /menu/pastries
-* /menu/regular
-* /gallery
-* /stories
+```
+/
+/about/background
+/about/muiristas
+/about/sources
+/menu/blended
+/menu/pastries
+/menu/regular
+/gallery
+/stories
+```
 
 Each of these routes have its HTML file equivalence named and structured in same way (with exception '/' which is 'index.html').
 
 There are additional routes that should not be visible to an ordinary client:
-* /sample
-* /submit
+```
+/sample
+/submit
+```
 
 '/sample' route is a reference when writing codes with Jinja2 Templating. '/submit' is only for post request activates when a user submits his/her story.
 
