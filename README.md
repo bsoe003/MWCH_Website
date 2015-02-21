@@ -69,6 +69,14 @@ All HTML files will contain some type of Jinja2 syntax to help bring back-end da
 
 For more information: http://jinja.pocoo.org/docs/dev/
 
+### base.html and static
+All CSS and JavaScript files shoud go under static folder or else it will not work. All general linking process of CSS and JS should be done in base.html. Only exception to this is if certain CSS or JS is applicable certain page only! Here are convention for attaching CSS and JS files in HTML:
+```html
+<link rel="stylesheet" href="{% if level==1 %}../{% endif %}css/[css_filename]" />
+<script type="text/javascript" src="{% if level==1 %}../{% endif %}js/[js_filename]"></script>
+```
+Please have rel="stylesheet" be a first attribute of link tag and type="text/javascript" be a first attribute of script tag (similar to above), so it prevents glitch on "produce.py" as much as possible.
+
 ### About Database (TBA)
 
 ### BDD Testing (TBA)
