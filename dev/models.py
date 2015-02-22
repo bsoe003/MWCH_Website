@@ -8,14 +8,14 @@ from dev import db
 
 class Stories(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    date = db.Column(db.Time)
+    date = db.Column(db.DateTime)
     text = db.Column(db.Text)
     approval = db.Column(db.Boolean)
 
     def __repr__(self):
         result ='Entry #%s\nDate: %s\nApproved: %s\n\n%s' \
-            % (str(self.id),str(self.date),str(self.approval),str(text))
+            % (str(self.id),str(self.date),str(self.approval),str(self.text))
         return result
 
     def __str__(self):
-        return self.__repr__
+        return str(self.__repr__)

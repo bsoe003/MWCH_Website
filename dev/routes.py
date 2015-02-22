@@ -5,9 +5,9 @@ Description: List and defines all functionality of routes.
 Prerequisite: Flask server must be running.
 """
 
-from dev import app, db, models, loader
-from flask import request, redirect, url_for
+from flask import *
 from datetime import datetime
+from dev import app, db, models, misc
 
 @app.route('/')
 def viewIndex():
@@ -23,7 +23,7 @@ def viewBackground():
 
 @app.route('/about/muiristas')
 def viewMuiristas():
-    data = loader.load('about_muiristas.csv')
+    data = misc.load('about_muiristas.csv')
     return render_template('about/muiristas.html', 
         level=1,
         muiristas=data)
@@ -38,32 +38,44 @@ def viewMenu():
 
 @app.route('/menu/regular')
 def viewRegular():
-    data = loader.load('menu_regular.csv')
+    data = misc.load('menu_regular.csv')
     return render_template('menu/regular.html', 
         level=1,
         menu=data)
 
 @app.route('/menu/blended_iced')
 def viewBlended():
-    data = loader.load('menu_blended.csv')
+    data = misc.load('menu_blended.csv')
     return render_template('menu/blended.html', 
         level=1,
         menu=data)
 
 @app.route('/menu/pastries')
 def viewPastries():
-    data = loader.load('menu_pastries.csv')
+    data = misc.load('menu_pastries.csv')
     return render_template('menu/pastries.html', 
         level=1,
         menu=data)
 
-@app.route('/stories')
+@app.route('/stories', methods=['GET','POST'])
 def viewStories():
-    return render_template('stories.html', level=0)
+    Stories = models.Stories
+    if request.method == 'POST':
+        text = request.form['q']
+        story = Stories(date=datetime.now(),text=text,approval=False)
+        db.session.add(story)
+        db.session.commit()
+        flash("Your story has been submitted.")
+        return redirect('/stories')
+    stories = Stories.query.filter(Stories.approval).order_by('date desc').all()
+    return render_template('stories.html',
+        level=0,
+        stories=stories,
+        encrypt=misc.encrypt)
 
 @app.route('/gallery')
 def viewGallery():
-    data = loader.load('gallery_photos.csv')
+    data = misc.load('gallery_photos.csv')
     return render_template('gallery.html',
         level=0,
         gallery=data)
@@ -71,11 +83,3 @@ def viewGallery():
 @app.route('/sample')
 def viewSample():
     return render_template('sample.html', level=0)
-
-@app.route('/submit', methods=['POST'])
-def submit():
-    text = request.args.get('q')
-    story = models.Stories(date=datetime.now(), text=text, approval=False)
-    db.session.add(story)
-    db.session.commit()
-    return 'Permission Denied'
