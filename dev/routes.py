@@ -77,8 +77,7 @@ def viewStories():
     stories = Stories.query.filter(Stories.approval).order_by('date desc').all()
     return render_template('stories.html',
         level=0,
-        stories=stories,
-        encrypt=loader.encrypt)
+        stories=stories)
 
 @app.route('/gallery')
 def viewGallery():

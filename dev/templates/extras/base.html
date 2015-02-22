@@ -15,13 +15,15 @@
         {% endblock %}
     </head>
     <body>
-        <!-- Navigation Bar here -->
-        <header></header>
-
-        <!-- Substituable Contents here -->
-        <div id="content">{% block content %}{% endblock %}</div>
-
-        <!-- Footer here -->
-        <footer></footer>
+        <header>
+            <!-- Navigation Bar here -->
+        </header>
+        <div id="content">
+            <!-- Substitutable Contents here -->
+            {% block content %}{% endblock %}
+        </div>
+        <footer>
+            <!-- Footer here -->
+        </footer>
     </body>
 </html>

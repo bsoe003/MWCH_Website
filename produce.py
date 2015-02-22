@@ -44,6 +44,10 @@ def route_transfer(host,route):
     soup = BeautifulSoup(text).prettify()
     soup = soup.replace('<link href="','<link href="../')
     soup = soup.replace('<script type="text/javascript" src="', '<script type="text/javascript" src="../')
+    regex = re.compile(r'<a href="/[a-zA-Z0-9/]*"')
+    anchors = regex.findall(soup)
+    for anchor in anchors:
+        soup = soup.replace(anchor,(anchor[:-1]+'.html"'))
     filename = path+'index.html' if not route else path+route+'.html'
     try:
         html = open(filename,'w')
@@ -66,11 +70,13 @@ def zip_files(name='protoype'):
 
 if __name__ == '__main__':
     if len(sys.argv) > 1 and sys.argv[1] == 'clean':
-        prompt = '\033[93m[WARNING]\033[0m This will delete all production files. Are you sure? '
+        prompt = '\033[93m[WARNING]\033[0m This will delete all production files. Are you sure? (Y/n) '
         answer = raw_input(prompt).lower().strip()
         if not answer or answer == 'yes' or answer == 'y':
             clean()
             print 'All production files removed successfully'
+        else:
+            print 'Removal Cancelled'
         exit(0)
 
     host = 'http://localhost:5000/'

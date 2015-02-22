@@ -76,7 +76,10 @@ All CSS and JavaScript files shoud go under static folder or else it will not wo
 <link rel="stylesheet" href="{% if level==1 %}../{% endif %}css/[css_filename]" />
 <script type="text/javascript" src="{% if level==1 %}../{% endif %}js/[js_filename]"></script>
 ```
-Please have rel="stylesheet" be a first attribute of link tag and type="text/javascript" be a first attribute of script tag (similar to above), so it prevents glitch on "produce.py" as much as possible.
+Please have rel="stylesheet" be a first attribute of "link" tag and type="text/javascript" be a first attribute of "script" tag (similar to above), so it prevents glitch on "produce.py" as much as possible.
+
+### Anchors
+Similar to CSS and Javascript properties, all anchors (hyperlinks) referring routes should have "href" be a first attribute of "a" tag. This is to prevent glitch on "produce.py" as much as possible.
 
 ### Database
 For the purposes of this development, the database will be handled by a Flask extension called "Flask-SQLAlchemy." This extension helps with modeling database with Python as well as calling data from it. The database itself will not be saved through repository; hence, creating and migrating database is necessary.
