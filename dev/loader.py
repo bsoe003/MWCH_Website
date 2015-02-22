@@ -19,9 +19,3 @@ def load(filename):
         datum = dict(zip(header,info))
         dataList.append(datum)
     return dataList
-
-def encrypt(phrases):
-    return zlib.compress(phrases)
-
-def decrypt(phrases):
-    return zlib.decompress(phrases)

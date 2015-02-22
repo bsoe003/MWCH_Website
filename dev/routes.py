@@ -6,8 +6,9 @@ Prerequisite: Flask server must be running.
 """
 
 from flask import *
+from flask.ext.mail import Message
 from datetime import datetime
-from dev import app, db, models, misc
+from dev import app, db, models, loader, mail
 
 @app.route('/')
 def viewIndex():
@@ -23,7 +24,7 @@ def viewBackground():
 
 @app.route('/about/muiristas')
 def viewMuiristas():
-    data = misc.load('about_muiristas.csv')
+    data = loader.load('about_muiristas.csv')
     return render_template('about/muiristas.html', 
         level=1,
         muiristas=data)
@@ -38,21 +39,21 @@ def viewMenu():
 
 @app.route('/menu/regular')
 def viewRegular():
-    data = misc.load('menu_regular.csv')
+    data = loader.load('menu_regular.csv')
     return render_template('menu/regular.html', 
         level=1,
         menu=data)
 
 @app.route('/menu/blended_iced')
 def viewBlended():
-    data = misc.load('menu_blended.csv')
+    data = loader.load('menu_blended.csv')
     return render_template('menu/blended.html', 
         level=1,
         menu=data)
 
 @app.route('/menu/pastries')
 def viewPastries():
-    data = misc.load('menu_pastries.csv')
+    data = loader.load('menu_pastries.csv')
     return render_template('menu/pastries.html', 
         level=1,
         menu=data)
@@ -65,17 +66,23 @@ def viewStories():
         story = Stories(date=datetime.now(),text=text,approval=False)
         db.session.add(story)
         db.session.commit()
+        #msg = Message("New story has been submitted",
+        #    sender="mwch.test001@gmail.com", 
+        #    recipients=["bsoe@ucsd.edu"])
+        #msg.body = text
+        #msg.html = '<b></b>'
+        #mail.send(msg)
         flash("Your story has been submitted.")
         return redirect('/stories')
     stories = Stories.query.filter(Stories.approval).order_by('date desc').all()
     return render_template('stories.html',
         level=0,
         stories=stories,
-        encrypt=misc.encrypt)
+        encrypt=loader.encrypt)
 
 @app.route('/gallery')
 def viewGallery():
-    data = misc.load('gallery_photos.csv')
+    data = loader.load('gallery_photos.csv')
     return render_template('gallery.html',
         level=0,
         gallery=data)

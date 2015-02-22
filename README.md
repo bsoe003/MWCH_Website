@@ -5,6 +5,7 @@ Website: Muir Woods Coffee House
 This website needs following essential tools:
 * Flask 0.10.1
 * SQLAlchemy 0.9.7
+* Flask-Mail 0.9.1
 * Beautiful Soup 4.3.2
 
 These tools can installed through **pip**, a Python package installer. The execution of these files MUST be done through Python 2.7.x. This will not work with Python 3+. The download link for Python is located under "Helpful links".
@@ -77,7 +78,25 @@ All CSS and JavaScript files shoud go under static folder or else it will not wo
 ```
 Please have rel="stylesheet" be a first attribute of link tag and type="text/javascript" be a first attribute of script tag (similar to above), so it prevents glitch on "produce.py" as much as possible.
 
-### About Database (TBA)
+### Database
+For the purposes of this development, the database will be handled by a Flask extension called "Flask-SQLAlchemy." This extension helps with modeling database with Python as well as calling data from it. The database itself will not be saved through repository; hence, creating and migrating database is necessary.
+
+To activate database:
+```
+cd database
+python _create.py
+python _migrate.py
+```
+
+To destroy database for resetting purposes:
+```
+python _clean.py
+```
+
+### Emails
+Sample email being used for this website will be "mwch.test001@gmail.com" (this will be the message sender). Everytime the user submits a story, this email will send it to individuals who need to approve the story. This is done through another Flask extension called "Flask-Mail"
+
+TODO: UI for approving messages
 
 ### BDD Testing (TBA)
 
