@@ -1,4 +1,11 @@
 #!flask/bin/python
+
+"""
+Filename: _upgrade.py
+From: Miguel Grinberg
+Description: Upgrade version when routes.py changed.
+"""
+
 import sys
 sys.path.append('..')
 

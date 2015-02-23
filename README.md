@@ -13,6 +13,8 @@ These tools can installed through **pip**, a Python package installer. The execu
 You may obtain pip installer through:
 > https://bootstrap.pypa.io/get-pip.py
 
+*Note:* Python 2.7.9 has built-in pip installer, so downloading may not be necessary.
+
 ```
 [sudo] python get-pip.py
 [sudo] pip install -r requirements.txt
@@ -100,8 +102,6 @@ python _clean.py
 Sample email being used for this website will be "mwch.test001@gmail.com" (this will be the message sender). Everytime the user submits a story, this email will send it to individuals who need to approve the story. This is done through another Flask extension called "Flask-Mail"
 
 TODO: UI for approving messages
-
-### BDD Testing (TBA)
 
 ### Production
 COGS 187B grader should neither run server locally nor install dependencies. A script called "**produce.py**" can generate static files along with their dependent CSS and JavaScript **files while running the server**. To generate such files:

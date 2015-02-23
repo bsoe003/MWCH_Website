@@ -1,4 +1,12 @@
 #!flask/bin/python
+
+"""
+Filename: _migrate.py
+From: Miguel Grinberg
+Description: Migrate database after being created.
+Prerequisite: Database created by _create.py
+"""
+
 import sys
 sys.path.append('..')
 

@@ -1,3 +1,9 @@
+"""
+Filename: config.py
+Author: Brian Soe
+Description: Configuration setting for Flask application.
+"""
+
 import os
 basedir = os.path.abspath(os.path.dirname(__file__))
 

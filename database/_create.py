@@ -1,4 +1,11 @@
 #!flask/bin/python
+
+"""
+Filename: _create.py
+From: Miguel Grinberg
+Description: Creates database table from models.py.
+"""
+
 import sys
 sys.path.append('..')
 

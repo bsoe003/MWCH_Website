@@ -1,4 +1,11 @@
 #!flask/bin/python
+
+"""
+Filename: _downgrade.py
+From: Miguel Grinberg
+Description: Downgrade version to revert back.
+"""
+
 import sys
 sys.path.append('..')
 
