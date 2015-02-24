@@ -77,6 +77,7 @@ All CSS and JavaScript files shoud go under static folder or else it will not wo
 ```html
 <link rel="stylesheet" href="{% if level==1 %}../{% endif %}css/[css_filename]" />
 <script type="text/javascript" src="{% if level==1 %}../{% endif %}js/[js_filename]"></script>
+<img src="{% if level==1 %}../{% endif %}img/[img_filename]" />
 ```
 Please have rel="stylesheet" be a first attribute of "link" tag and type="text/javascript" be a first attribute of "script" tag (similar to above), so it prevents glitch on "produce.py" as much as possible.
 
