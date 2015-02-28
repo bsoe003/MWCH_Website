@@ -46,13 +46,20 @@ def route_transfer(host,route):
     text = urllib2.urlopen(host+route).read() # grab html codes from route
 
     # format html code and fix css/js/anchor for static file
-    soup = BeautifulSoup(text).prettify()
-    soup = soup.replace('<link href="/','<link href="../')
-    soup = soup.replace('<script src="/','<script src="../')
-    soup = soup.replace('<img src="/','<img src="../')
+    soup = BeautifulSoup(text).prettify()\
+        .replace('<link href="/','<link href="../')\
+        .replace('<script src="/','<script src="../')\
+        .replace('<img src="/','<img src="../')
     anchors = re.compile(r'<a href="/[a-zA-Z0-9/]*"') #/ at 9
     for anchor in anchors.findall(soup):
-        soup = soup.replace(anchor,(anchor[:9]+anchor[10:-1]+'.html"'))
+        if anchor[10:-1] not in routes:
+            continue
+        if anchor[10:-1] == '':
+            soup = soup.replace(anchor,
+                (anchor[:9]+anchor[10:-1]+'index.html"'))
+        else:
+            soup = soup.replace(anchor,
+                (anchor[:9]+anchor[10:-1]+'.html"'))
 
     # for '/' route, save as 'index.html'
     filename = path+'index.html' if not route else path+route+'.html'
