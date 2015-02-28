@@ -73,19 +73,14 @@ All HTML files will contain some type of Jinja2 syntax to help bring back-end da
 For more information: http://jinja.pocoo.org/docs/dev/
 
 ### base.html and static
-All CSS and JavaScript files shoud go under static folder or else it will not work. All general linking process of CSS and JS should be done in base.html. Only exception to this is if certain CSS or JS is applicable certain page only! Here are convention for attaching CSS and JS files in HTML:
-```html
-<link rel="stylesheet" href="{% if level==1 %}../{% endif %}css/[css_filename]" />
-<script type="text/javascript" src="{% if level==1 %}../{% endif %}js/[js_filename]"></script>
-<img src="{% if level==1 %}../{% endif %}img/[img_filename]" />
-```
-Please have rel="stylesheet" be a first attribute of "link" tag and type="text/javascript" be a first attribute of "script" tag (similar to above), so it prevents glitch on "produce.py" as much as possible.
 
-### Anchors
-Similar to CSS and Javascript properties, all anchors (hyperlinks) referring routes should have "href" be a first attribute of "a" tag. When writing a link that refers to any route, please put '/' as first character of the link. This is to prevent glitch on "produce.py" as much as possible.
+All CSS and JavaScript files shoud go under static folder or else it will not work. All general linking process of CSS and JS should be done in base.html. Only exception to this is if certain CSS or JS is applicable certain page only! The convention is easy and simple. For link, script, img, a tag, their href or src should start with '/'. For example:
+
 ```html
-<a href="/about/background" [any other attributes]>[some stuff]</a>
+<link rel="stylesheet" href="/[path]" />
 ```
+More tags require href or src will be updated.
+
 
 ### Database
 For the purposes of this development, the database will be handled by a Flask extension called "Flask-SQLAlchemy." This extension helps with modeling database with Python as well as calling data from it. The database itself will not be saved through repository; hence, creating and migrating database is necessary.

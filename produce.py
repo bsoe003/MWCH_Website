@@ -16,11 +16,7 @@ orig_prettify = BeautifulSoup.prettify
 r = re.compile(r'^(\s*)', re.MULTILINE)
 
 # list of routes available for this website
-routes = ['',
-    'about/background', 'about/muiristas', 'about/sources',
-    'menu/regular', 'menu/blended_iced', 'menu/pastries',
-    'stories',
-    'gallery']
+routes = ['', 'about', 'menu', 'stories', 'gallery']
 
 # directories being used
 root = 'production/'
@@ -51,10 +47,9 @@ def route_transfer(host,route):
 
     # format html code and fix css/js/anchor for static file
     soup = BeautifulSoup(text).prettify()
-    soup = soup.replace('<link href="','<link href="../')
-    soup = soup.replace('<script type="text/javascript" src="',
-        '<script type="text/javascript" src="../')
-    soup = soup.replace('<img src="','<img src="../')
+    soup = soup.replace('<link href="/','<link href="../')
+    soup = soup.replace('<script src="/','<script src="../')
+    soup = soup.replace('<img src="/','<img src="../')
     anchors = re.compile(r'<a href="/[a-zA-Z0-9/]*"') #/ at 9
     for anchor in anchors.findall(soup):
         soup = soup.replace(anchor,(anchor[:9]+anchor[10:-1]+'.html"'))
