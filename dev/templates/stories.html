@@ -5,4 +5,18 @@
         <textarea id="q" name="q"></textarea>
         <input id="submit" type="submit" value="Submit">
     </form>-->
+    <div class="container">
+    	<h1>Your Stories</h1>
+    	{% for i in range(stories|length) %}
+    	{% if i%2 == 0 %}
+    	<div class="leftBubble">
+    		<!--populate bubble with respective text-->
+    	</div>
+    	{% else %}
+    	<div class="rightBubble">
+    		<!--populate bubble with respective text-->
+    	</div>
+    	{% endif %}
+    	{% endfor %}
+    </div>
 {% endblock %}

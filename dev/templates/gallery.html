@@ -2,13 +2,8 @@
 {% block content %}
 	<div class="container">
     	<h1>Gallery</h1>
-    	<img class= "1" src="img/gallery/1.png">
-    	<img class= "2" src="img/gallery/2.png">
-    	<img class= "3" src="img/gallery/3.png">
-    	<img class= "4" src="img/gallery/4.png">
-    	<img class= "5" src="img/gallery/5.png">
-    	<img class= "6" src="img/gallery/6.png">
-    	<img class= "7" src="img/gallery/7.png">
-    	<img class= "8" src="img/gallery/8.png">
+    	{% for photo in photos %}
+    	<img class= "{{photo['class_name']}}" src="{{photo['photo_url']}}">
+    	{% endfor %}
     </div>
 {% endblock %}
