@@ -72,7 +72,7 @@ def route_transfer(host,route):
     	newpath = filename.split('/')
         os.makedirs('/'.join(newpath[:-1]))
         html = open(filename,'w')
-    html.write(unicode(soup).encode('iso-8859-1')) # appropriate encode for saving
+    html.write(unicode(soup).encode('utf-8')) # appropriate encode for saving
     html.close()
 
 def zip_files(name='protoype'):
