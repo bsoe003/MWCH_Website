@@ -7,6 +7,7 @@ This website needs following essential tools:
 * SQLAlchemy 0.9.7
 * Flask-Mail 0.9.1
 * Beautiful Soup 4.3.2
+* Sass 3.4.13
 
 These tools can installed through **pip**, a Python package installer. The execution of these files MUST be done through Python 2.7.x. This will not work with Python 3+. The download link for Python is located under "Helpful links".
 
@@ -15,14 +16,20 @@ You may obtain pip installer through:
 
 *Note:* Python 2.7.9 has built-in pip installer, so downloading may not be necessary.
 
+To install Sass, you may need to install **Gem** (Ruby package installer). Different operating systems have different ways of installing Gem, but make sure it works in command line/terminal.
+
 ```
 [sudo] python get-pip.py
-[sudo] pip install -r requirements.txt
+[sudo] bash setup.sh
 ```
 Helpful links:
 > https://www.python.org/downloads/
 
 > https://pip.pypa.io/en/latest/installing.html
+
+> https://www.ruby-lang.org/en/downloads/
+
+> https://rubygems.org/pages/download
 
 
 ### Server (Tentative)
@@ -36,12 +43,8 @@ To kill the server, simply press "**ctrl**+**c**"
 The following are available routes for this website:
 ```
 /
-/about/background
-/about/muiristas
-/about/sources
-/menu/blended
-/menu/pastries
-/menu/regular
+/about
+/menu
 /gallery
 /stories
 ```
