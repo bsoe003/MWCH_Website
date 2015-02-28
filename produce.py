@@ -55,9 +55,9 @@ def route_transfer(host,route):
     soup = soup.replace('<script type="text/javascript" src="',
         '<script type="text/javascript" src="../')
     soup = soup.replace('<img src="','<img src="../')
-    anchors = re.compile(r'<a href="/[a-zA-Z0-9/]*"')
+    anchors = re.compile(r'<a href="/[a-zA-Z0-9/]*"') #/ at 9
     for anchor in anchors.findall(soup):
-        soup = soup.replace(anchor,(anchor[:-1]+'.html"'))
+        soup = soup.replace(anchor,(anchor[:9]+anchor[10:-1]+'.html"'))
 
     # for '/' route, save as 'index.html'
     filename = path+'index.html' if not route else path+route+'.html'
