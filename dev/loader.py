@@ -10,7 +10,7 @@ path = 'dev/data/'
 def load(filename):
     """ Load tsv files and convert to a list of dictionary """
     dataList =[]
-    with open(path+filename) as f:
+    with open(path+filename, 'rU') as f:
         lines = f.readlines()
         f.close()
     header = lines[0].strip().split('\t') # assume all keys are in first line
