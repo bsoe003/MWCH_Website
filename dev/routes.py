@@ -18,9 +18,11 @@ def viewIndex():
 @app.route('/about')
 def viewAbout():
     """ Renders About page """
-    muirisitas = loader.load('about_muiristas.tsv') # load gallery image data
+    muiristas = loader.load('about_muiristas.tsv') # load gallery image data
     sources = loader.load('about_sources.tsv') # load gallery image data
-    return render_template('about.html')
+    return render_template('about.html', 
+        muiristas=muiristas,
+        sources=sources)
 
 @app.route('/menu')
 def viewMenu():
@@ -50,9 +52,9 @@ def viewStories():
 @app.route('/gallery')
 def viewGallery():
     """ Renders Gallery page """
-    gallery = loader.load('gallery_photos.tsv') # load gallery image data
+    photos = loader.load('gallery_photos.tsv') # load gallery image data
     return render_template('gallery.html',
-        gallery=gallery)
+        photos=photos)
 
 @app.route('/sample')
 def viewSample():
