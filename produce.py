@@ -11,6 +11,7 @@ import subprocess
 import sys
 import os
 import re
+import glob
 
 orig_prettify = BeautifulSoup.prettify
 r = re.compile(r'^(\s*)', re.MULTILINE)
@@ -39,6 +40,8 @@ def file_transfer():
     """ Copy all static files from dev to production """
     for directory in os.listdir(static):
         subprocess.call(['cp','-r',static+directory,root])
+    for scss_file in glob.glob(root+'css/*.scss'):
+        subprocess.call(['rm',scss_file])
 
 def route_transfer(host,route):
     """ Save a certain route as static HTML file to production """
