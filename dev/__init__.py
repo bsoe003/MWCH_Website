@@ -9,6 +9,7 @@ from flask.ext.sqlalchemy import SQLAlchemy
 from flask.ext.mail import Mail
 import sys
 import random
+import subprocess
 
 # secret key selection characters
 selection = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -25,5 +26,9 @@ for i in range(50):
 # activate database and mail components
 db = SQLAlchemy(app)
 mail = Mail(app)
+
+# hacky way to compile sass
+path = "dev/static/"
+subprocess.call(['sass',path+'scss/base.scss',path+'css/style.css'])
 
 from dev import routes, models

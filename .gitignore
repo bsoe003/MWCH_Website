@@ -4,3 +4,5 @@
 production/*
 *.db
 database/repo
+.sass-cache
+*.css.map
