@@ -6,7 +6,6 @@ Prerequisite: Flask server must be running.
 """
 
 from bs4 import BeautifulSoup
-import jsbeautifier
 import urllib2
 import subprocess
 import sys
@@ -43,11 +42,6 @@ def file_transfer():
     for directory in os.listdir(static):
         subprocess.call(['cp','-r',static+directory,root])
     subprocess.call(['rm','-r',root+'scss'])
-    for js_fname in glob.glob(root+'js/*.js'):
-        text = jsbeautifier.beautify_file(js_fname)
-        js = open(js_fname, 'w')
-        js.write(unicode(text).encode('utf-8'))
-        js.close()
 
 def route_transfer(host,route):
     """ Save a certain route as static HTML file to production """
