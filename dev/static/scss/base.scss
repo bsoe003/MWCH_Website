@@ -2,22 +2,28 @@
 @import "variables";
 
 html, body {
-	font: 300 100% $body-font;
-	color: $off-black;
+	font-size: 100%;
+	font-family: sans-serif;
 	background-color: $off-white;
 }
 
 h1 {
-	font: 400 $header-link-font;
-	font-size: 3em
+	font-family: $header-link-font;
+	font-weight: 400;
+	font-size: 3em;
+	color: $light-blue;
 }
 
 h2 {
 	@extend h1;
 	font-size: 1.875em;
+	color: $lilac;
 }
 
 p {
+	font-family: $body-font;
+	font-weight: 300;
 	font-size: 0.875em;
+	color: $off-black;
 	margin: 0;
 }

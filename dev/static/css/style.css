@@ -3,19 +3,25 @@
 /*** SECONDARY COLORS VARIABLES ***/
 /*** FONTS STACKS ***/
 html, body {
-  font: 300 100% "Lato", "Helvetica Neue", sans-serif;
-  color: #333333;
+  font-size: 100%;
+  font-family: sans-serif;
   background-color: #FFFFFC; }
 
 h1, h2 {
-  font: 400 "Montserrat", "Helvetica Neue", sans-serif;
-  font-size: 3em; }
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+  color: #AAD1CE; }
 
 h2 {
-  font-size: 1.875em; }
+  font-size: 1.875em;
+  color: #D4C2D2; }
 
 p {
+  font-family: "Lato", "Helvetica Neue", sans-serif;
+  font-weight: 300;
   font-size: 0.875em;
+  color: #333333;
   margin: 0; }
 
 /*# sourceMappingURL=style.css.map */
