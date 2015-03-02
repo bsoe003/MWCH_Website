@@ -1,25 +1,25 @@
 {% extends "extras/base.html" %}
 {% block content %}
-    <span>This is Muir Woods</span>
+    <h1>This is Muir Woods</h1>
     <div id = "about">
     	<div id = "mission">
-    		<h1>Our Mission</h1>
+    		<h2>Our Mission</h2>
     		<p><!--insert mission text here --></p>
     	</div>
     	<div id = "history">
-    		<h1>Our History</h1>
+    		<h2>Our History</h2>
     		<p><!--insert mission text here --></p>
     	</div>
     </div>
     <div id = "muiristas">
-    	<h1>Meet the Muiristas</h1>
+    	<h2>Meet the Muiristas</h2>
     	{% for muirista in muiristas %}
     		<img src="{{photo_url}}">
     		<!--populate with respective muirista name-->
     	{% endfor %}
     </div>
     <div id="sources">
-    	<h1>Where We Source From</h1>
+    	<h2>Where We Source From</h2>
     	<div id = "row">
     		{% for source in sources %}
     			<img src="{{photo_url}}">
