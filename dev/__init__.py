@@ -28,7 +28,10 @@ db = SQLAlchemy(app)
 mail = Mail(app)
 
 # hacky way to compile sass
-path = "dev/static/"
-subprocess.call(['sass',path+'scss/base.scss',path+'css/style.css'])
+try:
+    path = "dev/static/"
+    subprocess.call(['sass',path+'scss/base.scss',path+'css/style.css'])
+except:
+    pass
 
 from dev import routes, models
