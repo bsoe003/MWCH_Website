@@ -1,12 +1,18 @@
-html {
-	font-size: 100%;
+/********** VARIABLES ***/
+@import "variables";
+
+html, body {
+	font: 300 100% $body-font;
+	background-color: $off-white;
 }
 
 h1 {
-	font-size: 3em;
+	font: 400 $header-link-font;
+	font-size: 3em
 }
 
 h2 {
+	@extend h1;
 	font-size: 1.875em;
 }
 
