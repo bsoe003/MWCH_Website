@@ -3,27 +3,65 @@
     <head>
         {% block css %}
         <!-- Include All CSS Files here -->
-        <link rel="stylesheet" href="/css/style.css" />
+        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,700italic' rel='stylesheet' type='text/css' />
+        <link rel="stylesheet" href="css/style.css" />
         {% endblock %}
 
         {% block js %}
         <!-- Include All JavaScript Files here -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
-        <script type="text/javascript" src="/js/script.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
         <title>Muir Woods Coffee House</title>
         {% endblock %}
     </head>
     <body>
         <header>
-            <!-- Navigation Bar here -->
+            <div id="logo">
+                <a href="/"><img src="img/logo.png"/></a>
+            </div>
+            <div id="nav">
+                <div class="option {% if endpoint == 'home' %}selected{% endif %}">
+                    <a href="/">HOME</a>
+                </div>
+                <div class="option {% if endpoint == 'about' %}selected{% endif %}">
+                    <a href="/about">ABOUT</a>
+                </div>
+                <div class="option {% if endpoint == 'menu' %}selected{% endif %}">
+                    <a href="/menu">MENU</a>
+                </div>
+                <div class="option {% if endpoint == 'stories' %}selected{% endif %}">
+                    <a href="/stories">YOUR STORIES</a>
+                </div>
+                <div class="option {% if endpoint == 'gallery' %}selected{% endif %}">
+                    <a href="/gallery">GALLERY</a>
+                </div>
+            </div>
         </header>
-        <div id="content">
-            <!-- Substitutable Contents here -->
-            {% block content %}{% endblock %}
+        <div id="wrapper">
+            <div id="content">
+                {% block content %}{% endblock %}
+            </div>
         </div>
         <footer>
-            <!-- Footer here -->
+            <div id="media">
+                <!-- Yelp -->
+                <a href="http://www.yelp.com/biz/muir-woods-coffee-house-la-jolla-2" target="_blank">
+                    <img src="img/yelp.png"/>
+                </a>
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/MuirWoodsCoffee" target="_blank">
+                    <img src="img/facebook55.png"/>
+                </a>
+                <!-- Instagram -->
+                <a href="https://instagram.com/muirwoodscoffeehouse/" target="_blank">
+                    <img src="img/instagram12.png"/>
+                </a>
+            </div>
+            <div id="copyright">
+                &copy; 2015 Muir Woods Coffee House | John Muir College | UC San Diego
+            </div>
         </footer>
     </body>
 </html>

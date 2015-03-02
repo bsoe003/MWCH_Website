@@ -45,14 +45,11 @@ def file_transfer():
 
 def route_transfer(host,route):
     """ Save a certain route as static HTML file to production """
-    path = root+'pages/' # default path
+    path = root # default path
     text = urllib2.urlopen(host+route).read() # grab html codes from route
 
     # format html code and fix css/js/anchor for static file
-    soup = BeautifulSoup(text).prettify()\
-        .replace('<link href="/','<link href="../')\
-        .replace('<script src="/','<script src="../')\
-        .replace('<img src="/','<img src="../')
+    soup = BeautifulSoup(text).prettify()
     anchors = re.compile(r'<a href="/[a-zA-Z0-9/]*"') #/ at 9
     for anchor in anchors.findall(soup):
         if anchor[10:-1] not in routes:
