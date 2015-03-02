@@ -13,7 +13,7 @@ from dev import app, db, models, loader, mail
 @app.route('/')
 def viewIndex():
     """ Renders homepage """
-    return render_template('index.html')
+    return render_template('index.html', endpoint="home")
 
 @app.route('/about')
 def viewAbout():
@@ -21,13 +21,14 @@ def viewAbout():
     muiristas = loader.load('about_muiristas.tsv') # load gallery image data
     sources = loader.load('about_sources.tsv') # load gallery image data
     return render_template('about.html', 
+        endpoint="about",
         muiristas=muiristas,
         sources=sources)
 
 @app.route('/menu')
 def viewMenu():
     """ Renders Menu page """
-    return render_template('menu.html')
+    return render_template('menu.html', endpoint="menu")
 
 @app.route('/stories', methods=['GET','POST'])
 def viewStories():
@@ -47,6 +48,7 @@ def viewStories():
     stories = Stories.query.filter(Stories.approval) \
         .order_by('date desc').all()
     return render_template('stories.html',
+        endpoint="stories",
         stories=stories)
 
 @app.route('/gallery')
@@ -54,6 +56,7 @@ def viewGallery():
     """ Renders Gallery page """
     photos = loader.load('gallery_photos.tsv') # load gallery image data
     return render_template('gallery.html',
+        endpoint="gallery",
         photos=photos)
 
 @app.route('/sample')
