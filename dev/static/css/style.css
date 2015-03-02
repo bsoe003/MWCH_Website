@@ -7,13 +7,17 @@
   width: 100%;
   min-height: 350px; }
 
+#debrief p {
+  min-height: 230px;
+  font-size: 1.125em; }
+
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
   color: #333333;
   font-weight: 300;
   background-color: #FFFFFC;
-  font-size: 14px;
+  /*	font-size: 14px; */
   margin: 0; }
 
 header {
@@ -54,7 +58,8 @@ p {
   font-weight: 300;
   font-size: 0.875em;
   color: #333333;
-  margin: 0; }
+  margin: 0;
+  text-align: center; }
 
 #logo {
   float: left;
@@ -102,7 +107,7 @@ p {
   text-align: right;
   margin-top: 28px;
   display: inline;
-  font-size: 0.8725em;
+  font-size: 0.75em;
   margin-right: 100px; }
 
 /*# sourceMappingURL=style.css.map */

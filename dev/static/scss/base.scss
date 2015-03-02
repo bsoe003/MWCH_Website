@@ -7,7 +7,7 @@ html, body {
 	color: $off-black;
 	font-weight: 300;
 	background-color: $off-white;
-	font-size: 14px;
+/*	font-size: 14px; */
 	margin: 0;
 }
 
@@ -56,6 +56,7 @@ p {
 	font-size: 0.875em;
 	color: $off-black;
 	margin: 0;
+	text-align: center; 
 }
 
 #logo {
@@ -113,6 +114,6 @@ p {
 	text-align: right;
 	margin-top: 28px;
 	display: inline;
-	font-size: 0.8725em;
+	font-size: 0.75em;
 	margin-right: 100px;
 }
