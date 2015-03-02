@@ -1,6 +1,12 @@
 /*** PRIMARY COLORS VARIABLES ***/
 /*** SECONDARY COLORS VARIABLES ***/
 /*** FONTS STACKS ***/
+/*************** INDEX PAGE ***/
+#banner {
+  background: url("../img/banner_placeholder.jpg");
+  width: 100%;
+  min-height: 350px; }
+
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
