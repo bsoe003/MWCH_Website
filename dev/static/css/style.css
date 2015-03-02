@@ -4,6 +4,7 @@
 /*** FONTS STACKS ***/
 html, body {
   font: 300 100% "Lato", "Helvetica Neue", sans-serif;
+  color: #333333;
   background-color: #FFFFFC; }
 
 h1, h2 {
