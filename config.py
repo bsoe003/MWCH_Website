@@ -11,7 +11,7 @@ try:
     SQLALCHEMY_DATABASE_URI = os.environ['DATABASE_URL']
 except:
     SQLALCHEMY_DATABASE_URI = 'sqlite:///' + os.path.join(basedir, 'database/table.db')
-    SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'database/repo')
+SQLALCHEMY_MIGRATE_REPO = os.path.join(basedir, 'database/repo')
 
 MAIL_SERVER = 'smtp.gmail.com'
 MAIL_PORT = 465
