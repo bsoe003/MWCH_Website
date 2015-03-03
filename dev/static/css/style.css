@@ -62,14 +62,54 @@
 .white-text {
   color: #FFFFFC; }
 
-/********* MENU PAGE ***********/
-#menuBlurb {
-  text-alight: center;
+/********* ABOUT PAGE ***********/
+#about {
+  height: 454px;
+  background-color: #877770; }
+
+#mission {
+  width: 50%;
+  float: left; }
+  #mission p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; }
+
+#history {
+  width: 50%;
+  float: right; }
+  #history p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; }
+
+#muiristasBio {
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
+  width: 70%;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.muirista {
+  width: 250px;
+  height: 375px;
+  margin-right: 2%;
+  margin-left: 2%; }
+
+#sources {
+  height: 392px;
+  background-color: #F9F7F1;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+/********* MENU PAGE ***********/
+#menuBlurb {
+  text-align: center;
   height: 200px;
-  /* temp */ }
+  /* temp */
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; }
 
 #menuContainer {
   background-color: #464c44;
@@ -111,9 +151,19 @@
 .row {
   height: 450px; }
 
-/*** PRIMARY COLORS VARIABLES ***/
-/*** SECONDARY COLORS VARIABLES ***/
-/*** FONTS STACKS ***/
+/*************** VARIABLES ***/
+#debrief p, .section-content, #story-content, #hours, #location {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+#debrief p, #story-content {
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto; }
+
 #story_form {
   width: 100%;
   background-color: #F6F3F3;

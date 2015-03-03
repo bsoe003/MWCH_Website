@@ -1,0 +1,50 @@
+/********* ABOUT PAGE ***********/
+
+@mixin center($width){
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	width: $width;
+}
+
+#about{
+	height: 454px;
+	background-color: $light-brown;
+}
+
+#mission{
+	width: 50%;
+	float: left;
+	p{
+		@include center(70%);
+	}
+}
+
+#history{
+	width: 50%;
+	float: right;
+	p{
+		@include center(70%);
+	}
+}
+
+#muiristasBio{
+	@include center(70%);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+.muirista{
+	width: 250px;
+	height: 375px;
+	margin-right: 2%;
+	margin-left: 2%;
+}
+
+#sources{
+	height: 392px;
+	background-color: $tan;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}

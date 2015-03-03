@@ -1,11 +1,16 @@
 /********* MENU PAGE ***********/
+@mixin center($width){
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	width: $width;
+}
 
 #menuBlurb{
-	text-alight: center;
-	margin-left: auto;
-	margin-right: auto;
-	width: 50%;
+	text-align: center;
 	height: 200px;  /* temp */
+	@include center(50%);
 }
 
 #menuContainer{
