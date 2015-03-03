@@ -64,12 +64,12 @@
 
 /********* MENU PAGE ***********/
 #menuBlurb {
-  text-alight: center;
+  text-align: center;
+  height: 200px;
+  /* temp */
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
-  height: 200px;
-  /* temp */ }
+  width: 50%; }
 
 #menuContainer {
   background-color: #464c44;
@@ -110,6 +110,46 @@
 
 .row {
   height: 450px; }
+
+/********* ABOUT PAGE ***********/
+#about {
+  height: 454px;
+  background-color: #877770; }
+
+#mission {
+  width: 50%;
+  float: left; }
+  #mission p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; }
+
+#history {
+  width: 50%;
+  float: right; }
+  #history p {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%; }
+
+#muiristasBio {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70%;
+  padding-top: 50px;
+  padding-bottom: 50px; }
+
+.muirista {
+  width: 250px;
+  height: 375px;
+  margin-right: 2%;
+  margin-left: 2%; }
+
+#sources {
+  height: 392px;
+  background-color: #F9F7F1;
+  padding-top: 50px;
+  padding-bottom: 50px; }
 
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
