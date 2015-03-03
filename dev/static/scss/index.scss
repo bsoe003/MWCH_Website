@@ -6,22 +6,22 @@
 	border-bottom: 5px solid $dark-blue;
 }
 
+// First Section
 #debrief {
 	height: 200px;
 	background-color: $off-white;
 	p {
 		font-size: 1.125em;
-		margin-left: 225px;
-		margin-right: 225px;
+		@extend %horizontal-align;
 		@extend %vertical-align;
 	}
 }
 
+// Specials section
 #specials {
 	height: 380px;
 	background-color: $off-white;
 	img {
-		float: left;
 		width: 50%;
 		height: 100%;
 	}
@@ -37,7 +37,49 @@
 	@extend %vertical-align;	
 }
 
-// cheating
+// Stories section
+#storiesPreview {
+	height: 280px;
+	background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)),
+		url('../img/bg_placeholder.jpg') no-repeat fixed center center;
+}
+
+#story-content {
+	@extend .section-content;
+	@extend %horizontal-align;
+}
+
+.story {
+	width: 240px;
+	display: inline-block;
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+// Location and Hours section
+#locationHours {
+	@extend #specials;
+}
+
+#hours, #location {
+	width: 38%;
+	height: 38%;
+	@extend %vertical-align;
+	padding-left: 6%;
+	padding-right: 6%;
+}
+
+// Icons section
+#icons {
+	height: 330px;
+	background-color: orange;
+}
+
+// Random Redundant/Hacky Styling
 .left-text {
 	text-align: left;
+}
+
+.white-text {
+	color: $off-white;
 }
