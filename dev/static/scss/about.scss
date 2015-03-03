@@ -33,13 +33,12 @@
 	@include center(70%);
 	padding-top: 50px;
 	padding-bottom: 50px;
-}
-
-.muirista{
-	width: 250px;
-	height: 375px;
-	margin-right: 2%;
-	margin-left: 2%;
+	img{
+		width: 250px;
+		height: 375px;
+		margin-right: 2%;
+		margin-left: 2%;
+	}
 }
 
 #sources{
