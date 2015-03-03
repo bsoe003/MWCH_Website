@@ -1,0 +1,31 @@
+/********* GALLERY PAGE ***********/
+
+.container{
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.firstRow{
+	height: 587px;
+}
+
+.firstCol{
+	height: inherit;
+	width: 370px;
+	float: left;
+}
+
+.pic-1, .pic-2, .pic-4, .pic-7{
+	margin-right: 30px;
+	margin-bottom: 30px;
+}
+
+.pic-3, .pic-5, .pic-6, .pic-8{
+	float: right;
+	margin-bottom: 30px;
+}
+
+.row{
+	height: 450px;
+}
