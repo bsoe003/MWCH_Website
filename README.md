@@ -51,14 +51,6 @@ The following are available routes for this website:
 
 Each of these routes have its HTML file equivalence named and structured in same way (with exception '/' which is 'index.html').
 
-There are additional routes that should not be visible to an ordinary client:
-```
-/sample
-/submit
-```
-
-'/sample' route is a reference when writing codes with Jinja2 Templating. '/submit' is only for post request activates when a user submits his/her story.
-
 ### File Structure (Tentative)
 There are 4 essential structures for this website. Each has its unique responsibility, so be sure to understand them.
 #### root
@@ -99,6 +91,8 @@ To destroy database for resetting purposes:
 ```
 python _clean.py
 ```
+
+[Heroku Instruction TBA]
 
 ### Emails
 Sample email being used for this website will be "mwch.test001@gmail.com" (this will be the message sender). Everytime the user submits a story, this email will send it to individuals who need to approve the story. This is done through another Flask extension called "Flask-Mail"

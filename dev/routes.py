@@ -35,14 +35,16 @@ def viewStories():
     Stories = models.Stories
     if request.method == 'POST':
         text = request.form['q']
-        story = Stories(date=datetime.now(),text=text,approval=True)
+        date = datetime.now().strftime('%m/%d/%Y')
+        story = Stories(date=datetime.now(),text=text,approval=False)
         db.session.add(story)
         db.session.commit()
-        #msg = Message("New story has been submitted",
-        #    sender="mwch.test001@gmail.com", 
-        #    recipients=["bsoe@ucsd.edu"])
-        #msg.html = '<b>%s</b>' % text
-        #mail.send(msg)
+        msg = Message("New story has been submitted",
+            sender="NoSLP", 
+            recipients=["bsoe@ucsd.edu","dhyee@ucsd.edu","cvd001@ucsd.edu"])
+        msg.html = 'The following story needs an approval:<br/><br/>'\
+            +'<b>Date:</b> '+date+'<br/><b>Story:</b> '+text+'<br/><br/>'
+        mail.send(msg)
         flash("Your story has been submitted.")
         return redirect('/stories')
     stories = Stories.query.filter(Stories.approval) \
@@ -58,8 +60,3 @@ def viewGallery():
     return render_template('gallery.html',
         endpoint="gallery",
         photos=photos)
-
-@app.route('/sample')
-def viewSample():
-    """ Renders sample page for reference. DELETED SOON """
-    return render_template('sample.html')
