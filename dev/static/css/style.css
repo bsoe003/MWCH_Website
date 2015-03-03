@@ -11,6 +11,31 @@
   min-height: 230px;
   font-size: 1.125em; }
 
+/*** PRIMARY COLORS VARIABLES ***/
+/*** SECONDARY COLORS VARIABLES ***/
+/*** FONTS STACKS ***/
+#story_form {
+  width: 100%;
+  background-color: #F6F3F3;
+  height: 60px;
+  padding-top: 20px; }
+
+form {
+  width: 1000px;
+  margin-left: auto;
+  margin-right: auto; }
+
+#submit {
+  visibility: hidden;
+  display: none; }
+
+#q {
+  border-radius: 2px;
+  border: 1px solid #333333;
+  width: 100%;
+  resize: none;
+  height: 30px; }
+
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;

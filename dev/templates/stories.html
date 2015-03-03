@@ -1,10 +1,11 @@
 {% extends "extras/base.html" %}
 {% block content %}
-    <!-- Modify your content here -->
-    <!--<form method="post">
-        <textarea id="q" name="q"></textarea>
-        <input id="submit" type="submit" value="Submit">
-    </form>-->
+    <div id="story_form">
+        <form method="post">
+            <textarea id="q" name="q"></textarea>
+            <input id="submit" type="submit" value="Submit">
+        </form>
+    </div>
     <div class="container">
     	<h1>Your Stories</h1>
     	{% for i in range(stories|length) %}

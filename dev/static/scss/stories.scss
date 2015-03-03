@@ -1,0 +1,27 @@
+@import "variables";
+
+#story_form {
+	width: 100%;
+	background-color: $light-purple;
+	height: 60px;
+	padding-top: 20px;
+}
+
+form {
+	width: 1000px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#submit {
+	visibility: hidden;
+	display: none;
+}
+
+#q {
+	border-radius: 2px;
+	border: 1px solid $off-black;
+	width: 100%;
+	resize: none;
+	height: 30px;
+}
