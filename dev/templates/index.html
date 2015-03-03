@@ -2,7 +2,7 @@
 {% block content %}
 	<!--insert image of banner here-->
     <div id="banner"></div>
-    <div id="content">
+    <div id="container">
         <div id="debrief">
         	<p>If it’s good coffee you seek at UCSD, then <b>Muir Woods</b> is the answer. We carry fair trade coffee from a local roaster, organic loose leaf teas, and a selection of pastries from a local bakery. Best on campus! We serve our products with a smile and as much conversation as you'd like.</p>
         </div>
@@ -10,7 +10,7 @@
         	<!--Insert image of specials that's 50% of width here-->
             <img src="img/specials.png" class="left-side"/>
         	<div class="blurb right-side">
-        		<div class="section-content">
+        		<div id="section-content">
                     <h2>Specials</h2>
             		<p class="white-text">Today is Abraham Lincolns and Charles Darwins birthday!<br/>
                     Muir Woods has new specials, Oh Yay!<br/>
@@ -56,10 +56,19 @@
                     </div>
         	</div>
         	<!--image of location that's 50% of width with class "right-side" should go here-->
+            <img src="../img/specials.png" class="right-side" alt="placeholder">
         </div>
         <div id="icons">
         	<!--insert the three icon images here-->
+            <div id="icon-content">
+                <div id="icon-logo">
+                <img src="../img/USDAorganic.png" class="icon-resize">
+                <img src="../img/fairtrade.jpg" class="icon-resize">
+                <br>
+                <img src="../img/tritoncashlogo.png">
+            </div>
         	<p>Muir Woods carries <b>organic coffee</b> from local vendors and a wide variety of <b>loose leaf teas</b>.  We also offer many alternatives in preparation like soy milk or almond milk on request. On-campus students fear not! <b>We accept Triton Cash</b>.</p>
+            </div>
         </div>
     </div>
 {% endblock %}

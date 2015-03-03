@@ -33,7 +33,7 @@
 	background-color: $dark-brown;
 }
 
-.section-content {
+#section-content {
 	@extend %vertical-align;	
 }
 
@@ -45,7 +45,7 @@
 }
 
 #story-content {
-	@extend .section-content;
+	@extend #section-content;
 	@extend %horizontal-align;
 }
 
@@ -72,7 +72,28 @@
 // Icons section
 #icons {
 	height: 330px;
-	background-color: orange;
+	background-color: $off-white;
+}
+
+#icon-content {
+	@extend %vertical-align;
+	width: 40%;
+	margin-right: auto;
+	margin-left: auto;
+	img {
+		padding: 3%;
+	}
+}
+
+#icon-logo {
+	width: 40%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.icon-resize {
+	width: auto;
+	height: 100px;
 }
 
 // Random Redundant/Hacky Styling
