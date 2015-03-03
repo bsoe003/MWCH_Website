@@ -39,12 +39,12 @@ def viewStories():
         story = Stories(date=datetime.now(),text=text,approval=False)
         db.session.add(story)
         db.session.commit()
-        msg = Message("New story has been submitted",
-            sender="NoSLP", 
-            recipients=["bsoe@ucsd.edu","dhyee@ucsd.edu","cvd001@ucsd.edu"])
-        msg.html = 'The following story needs an approval:<br/><br/>'\
-            +'<b>Date:</b> '+date+'<br/><b>Story:</b> '+text+'<br/><br/>'
-        mail.send(msg)
+        #msg = Message("New story has been submitted",
+        #    sender="NoSLP", 
+        #    recipients=["bsoe@ucsd.edu","dhyee@ucsd.edu","cvd001@ucsd.edu"])
+        #msg.html = 'The following story needs an approval:<br/><br/>'\
+        #    +'<b>Date:</b> '+date+'<br/><b>Story:</b> '+text+'<br/><br/>'
+        #mail.send(msg)
         flash("Your story has been submitted.")
         return redirect('/stories')
     stories = Stories.query.filter(Stories.approval) \
