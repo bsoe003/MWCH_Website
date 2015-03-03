@@ -4,6 +4,11 @@ $(document).ready(function(){
 	var threshold = 10;
 	var shrinked = false;
 	var duration = 500;
+	var charLimit = 250;
+
+	$("#submit").hide();
+	$('#charLimit').hide();
+	$('#charLimit').html('<b>'+charLimit+'</b> characters remaining');
 
 	function shrink(){
 		$("header").velocity({
@@ -57,4 +62,32 @@ $(document).ready(function(){
 			expand();
 		prevTop = currTop;
 	});
+
+	$("#story_form").click(function(){
+		$(this).velocity({
+			height: 165
+		});
+		$(this).css({"cursor":"auto"});
+		$("#q").velocity({
+			height: 70
+		});
+		$("#submit").delay(100).slideDown();
+		$("#charLimit").delay(100).slideDown();
+	});
+
+	$("#q").keyup(function(){
+		charCheck();
+	});
+
+	function charCheck(){
+		var length = $("#q").val().length;
+		var remaining = charLimit-length;
+		$('#charLimit').html('<b>'+remaining+'</b> characters remaining');
+		if(remaining <= 10) {
+			$('#charLimit').addClass("applyRed");
+		}
+		else {
+			$('#charLimit').removeClass("applyRed");
+		}
+	}
 });

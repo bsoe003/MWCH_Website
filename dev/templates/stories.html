@@ -2,7 +2,8 @@
 {% block content %}
     <div id="story_form">
         <form method="post">
-            <textarea id="q" name="q"></textarea>
+            <textarea maxlength="250" oninput="charCheck(event)" id="q" name="q"></textarea>
+            <div id="charLimit"></div>
             <input id="submit" type="submit" value="Submit">
         </form>
     </div>
@@ -10,12 +11,16 @@
     	<h1>Your Stories</h1>
     	{% for i in range(stories|length) %}
     	{% if i%2 == 0 %}
-    	<div class="leftBubble">
-    		<!--populate bubble with respective text-->
+    	<div class="bubble leftBubble">
+            <div class="storyholder">
+                “{{ stories[i].text }}”
+            </div>
     	</div>
     	{% else %}
-    	<div class="rightBubble">
-    		<!--populate bubble with respective text-->
+    	<div class="bubble rightBubble">
+            <div class="storyholder">
+                “{{ stories[i].text }}”
+            </div>
     	</div>
     	{% endif %}
     	{% endfor %}
