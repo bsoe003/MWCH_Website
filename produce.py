@@ -38,7 +38,7 @@ def clean():
 
 def file_transfer():
     """ Copy all static files from dev to production """
-    subprocess.call(['rm','-r','.sass-cache'])
+    subprocess.call(['rm','-rf','.sass-cache'])
     for directory in os.listdir(static):
         subprocess.call(['cp','-r',static+directory,root])
     subprocess.call(['rm','-r',root+'scss'])
@@ -47,7 +47,6 @@ def route_transfer(host,route):
     """ Save a certain route as static HTML file to production """
     path = root # default path
     text = urllib2.urlopen(host+route).read() # grab html codes from route
-    #text = unicode(text).decode('iso-8859-1')
 
     # format html code and fix css/js/anchor for static file
     soup = BeautifulSoup(text).prettify()
@@ -101,7 +100,7 @@ if __name__ == '__main__':
     try:
         urllib2.urlopen(host)
     except:
-        print '\033[91m[ERROR]\033[0m No localhost found. Please run: "python server.py"'
+        print '\033[91m[ERROR]\033[0m No '+host+' found. Please run: "python server.py"'
         exit(1)
 
     # Transfer all static files
