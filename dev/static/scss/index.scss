@@ -1,6 +1,6 @@
 /*************** INDEX PAGE ***/
 #banner {
-	background:url('../img/banner_placeholder.jpg');
+	background: $off-white url('../img/banner_placeholder.jpg') no-repeat right top;
 	width: 100%;
 	min-height: 400px;
 	border-bottom: 5px solid $dark-blue;
@@ -50,10 +50,10 @@
 }
 
 .story {
-	width: 240px;
+	width: 33%;
 	display: inline-block;
-	padding-left: 3%;
-	padding-right: 3%;
+	/* padding-left: 3%;
+	padding-right: 3%; */
 }
 
 // Location and Hours section
