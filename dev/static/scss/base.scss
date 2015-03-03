@@ -7,7 +7,7 @@ html, body {
 	color: $off-black;
 	font-weight: 300;
 	background-color: $off-white;
-/*	font-size: 14px; */
+//	font-size: 14px;
 	margin: 0;
 }
 
@@ -20,6 +20,7 @@ header {
 	width: 100%;
 	top: 0;
 	left: 0;
+	z-index: 9999;
 }
 
 footer {
@@ -37,6 +38,10 @@ a {
 	text-decoration: none;
 }
 
+h1, h2, p {
+	text-align: center;
+}
+
 h1 {
 	font-family: $header-link-font;
 	font-weight: 400;
@@ -48,6 +53,8 @@ h2 {
 	@extend h1;
 	font-size: 1.875em;
 	color: $lilac;
+	margin-bottom: 12px;
+	margin-top: 0;
 }
 
 p {
@@ -56,7 +63,6 @@ p {
 	font-size: 0.875em;
 	color: $off-black;
 	margin: 0;
-	text-align: center; 
 }
 
 #logo {
@@ -116,4 +122,12 @@ p {
 	display: inline;
 	font-size: 0.75em;
 	margin-right: 100px;
+}
+
+.right-side {
+	float: right;
+}
+
+.left-side {
+	float: left;
 }
