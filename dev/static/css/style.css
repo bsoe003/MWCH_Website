@@ -38,7 +38,7 @@
 
 #storiesPreview {
   height: 280px;
-  background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_placeholder.jpg") no-repeat fixed center center; }
+  background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed center center; }
 
 .story {
   width: 240px;
