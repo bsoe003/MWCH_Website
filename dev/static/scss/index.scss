@@ -2,12 +2,42 @@
 #banner {
 	background:url('../img/banner_placeholder.jpg');
 	width: 100%;
-	min-height: 350px;
+	min-height: 400px;
+	border-bottom: 5px solid $dark-blue;
 }
 
 #debrief {
-	p{
-	min-height: 230px;
-	font-size: 1.125em;
+	height: 200px;
+	background-color: $off-white;
+	p {
+		font-size: 1.125em;
+		margin-left: 225px;
+		margin-right: 225px;
+		@extend %vertical-align;
 	}
+}
+
+#specials {
+	height: 380px;
+	background-color: $off-white;
+	img {
+		float: left;
+		width: 50%;
+		height: 100%;
+	}
+}
+
+.blurb {
+	width: 50%;
+	height: 100%;
+	background-color: $dark-brown;
+}
+
+.section-content {
+	@extend %vertical-align;	
+}
+
+// cheating
+.left-text {
+	text-align: left;
 }
