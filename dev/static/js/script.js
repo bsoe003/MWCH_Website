@@ -1,45 +1,44 @@
 $(document).ready(function(){
+	// width of 905 -> shrink to hamburger icon
 	var prevTop = $(window).scrollTop();
-	var threshold = 50;
+	var threshold = 10;
+	var shrinked = false;
+	var duration = 500;
 
 	function shrink(){
-		$("header").height(70).css({"opacity":"0.9"});
-		$("#nav").css({"marginTop":"25px"});
-		$("#logo").css({"paddingTop":"10px"});
-		$("#logo > a > img").height(50);
-		/*$("header").velocity({
+		$("header").velocity({
 			opacity: 0.95,
 			height: 70
-		}, 1000);
+		}, duration);
 		$("#nav").velocity({
 			marginTop: "25px"
-		}, 1000);
+		}, duration);
 		$("#logo").velocity({
 			paddingTop: "10px"
-		}, 1000);
+		}, duration);
 		$("#logo > a > img").velocity({
 			height: 50
-		}, 1000);*/
+		}, duration);
+		$(".selected").css({"border-bottom":"3px solid transparent"});
+		shrinked = true;
 	}
 
 	function expand(){
-		$("header").height(150).css({"opacity":"1.0"});
-		$("#nav").css({"marginTop":"65px"});
-		$("#logo").css({"paddingTop":"25px"});
-		$("#logo > a > img").height(100);
-		/*$("header").velocity({
+		$("header").velocity({
 			opacity: 1.0,
 			height: 150
-		}, 1000);
-		$("#nav").stop().velocity({
+		}, duration);
+		$("#nav").velocity({
 			marginTop: "65px"
-		}, 1000);
-		$("#logo").stop().velocity({
+		}, duration);
+		$("#logo").velocity({
 			paddingTop: "25px"
-		}, 1000);
-		$("#logo > a > img").stop().velocity({
+		}, duration);
+		$("#logo > a > img").velocity({
 			height: 100
-		}, 1000);*/
+		}, duration);
+		$(".selected").css({"border-bottom":"3px solid #D08B84"});
+		shrinked = false;
 	}
 
 	if(prevTop > threshold) {
@@ -52,20 +51,10 @@ $(document).ready(function(){
 	$(window).scroll(function(){
 		var currTop = $(window).scrollTop();
 		var delta = prevTop-currTop;
-		console.log(delta);
-		if(currTop > threshold && delta <= 0){
+		if(!shrinked && currTop > threshold && delta <= 0)
 			shrink();
-		}
-		else if(currTop <= threshold) {
+		else if(shrinked && currTop <= threshold)
 			expand();
-		}
 		prevTop = currTop;
 	});
-
-	/*setInterval(function(){
-		var currTop = $(window).scrollTop();
-		if(currTop <= threshold) {
-			expand();
-		}
-	},0);*/
 });
