@@ -14,7 +14,12 @@
     <div id = "muiristasBio">
     	<h2>Meet the Muiristas</h2>
     	{% for muirista in muiristas %}
-    		<img src="{{muirista['photo_url']}}">
+            <div class = "muiristaPhoto">
+    		  <img src="{{muirista['photo_url']}}">
+            </div>
+            <div class = "muiristaText">
+                {{muirista['name']}}
+            </div>
     	{% endfor %}
     </div>
     <div id = "sources">

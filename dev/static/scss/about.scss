@@ -30,9 +30,13 @@
 }
 
 #muiristasBio{
-	@include center(70%);
+	@include center(75%);
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+#muiristaPhoto{
+
 	img{
 		width: 250px;
 		height: 375px;
