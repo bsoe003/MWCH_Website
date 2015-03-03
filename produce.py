@@ -47,6 +47,7 @@ def route_transfer(host,route):
     """ Save a certain route as static HTML file to production """
     path = root # default path
     text = urllib2.urlopen(host+route).read() # grab html codes from route
+    #text = unicode(text).decode('iso-8859-1')
 
     # format html code and fix css/js/anchor for static file
     soup = BeautifulSoup(text).prettify()
@@ -69,7 +70,7 @@ def route_transfer(host,route):
     	newpath = filename.split('/')
         os.makedirs('/'.join(newpath[:-1]))
         html = open(filename,'w')
-    html.write(unicode(soup).encode('utf-8')) # appropriate encode for saving
+    html.write(str(unicode(soup).encode('utf-8'))) # appropriate encode for saving
     html.close()
 
 def zip_files(name='protoype'):
