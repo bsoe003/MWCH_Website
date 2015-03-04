@@ -73,7 +73,11 @@
 }
 
 #centerSources{
-	@include center(90%);
+	padding-top: 50px;
+	position: absolute;
+	left: 50%;
+	right: 50%;
+	margin: 0 -550px 0 -550px;
 	img{
 		width: 250px;
 		height: auto;
