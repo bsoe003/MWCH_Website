@@ -11,14 +11,14 @@
     		<p>This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods. This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods.</p>
     	</div>
     </div>
-    <div id = "muiristasBio">
+    <div id="muiristasBio">
     	<h2>Meet the Muiristas</h2>
     	{% for muirista in muiristas %}
-            <div class = "muiristaPhoto">
-    		  <img src="{{muirista['photo_url']}}">
-            </div>
-            <div class = "muiristaText">
-                {{muirista['name']}}
+            <div class="muiristaWrapper">
+            	<img src="{{muirista['photo_url']}}">
+                <div class = "muiristaText">
+                    {{muirista['name']}} <br/>
+                </div>
             </div>
     	{% endfor %}
     </div>
