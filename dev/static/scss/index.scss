@@ -1,4 +1,12 @@
 /*************** INDEX PAGE ***/
+@mixin center($width){
+	margin: {
+		left: auto;
+		right: auto;
+	}
+	width: $width;
+}
+
 #banner {
 	background: $off-white url('../img/banner_placeholder.jpg') no-repeat;
 	background-size: cover;
@@ -13,8 +21,7 @@
 	background-color: $off-white;
 	p {
 		font-size: 1.125em;
-		width: 70%;
-		@extend %horizontal-align;
+		@include center(70%);
 		@extend %vertical-align;
 	}
 }
@@ -49,8 +56,7 @@
 
 #story-content {
 	@extend %vertical-align;
-	@extend %horizontal-align;
-	width: 99%;
+	@include center(99%);
 	text-align: center;
 }
 
@@ -68,7 +74,7 @@
 }
 
 #hours, #location {
-	width: 30%;
+	width: 200px;
 	height: 45%;
 	display: inline-block;
 }
@@ -93,8 +99,7 @@
 
 #icon-content {
 	@extend %vertical-align;
-	@extend %horizontal-align;
-	width: 90%;
+	@include center(90%);
 	text-align: center;
 	p {
 		width: 45%;
@@ -103,8 +108,7 @@
 }
 
 #icon-logo {
-	@extend %horizontal-align;
-	width: 90%;
+	@include center(90%);
 	img {
 		display: inline-block;
 		padding: 0px 10px 10px 10px;
