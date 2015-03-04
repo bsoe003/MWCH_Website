@@ -3,12 +3,15 @@ $(document).ready(function(){
 	var prevTop = $(window).scrollTop();
 	var threshold = 10;
 	var shrinked = false;
+	var hovered = false;
 	var duration = 500;
 	var charLimit = 250;
 
 	$("#submit").hide();
 	$('#charLimit').hide();
+	//$(".hoverDisplay").hide();
 	$('#charLimit').html('<b>'+charLimit+'</b> characters remaining');
+	//$(".hoverDisplay").height($(".muiristaPhoto > img").height()+3);
 
 	function shrink(){
 		$("header").velocity({
@@ -90,4 +93,20 @@ $(document).ready(function(){
 			$('#charLimit').removeClass("applyRed");
 		}
 	}
+
+	/*$(".muiristaPhoto > img").hover(function(){
+		if(!hovered){
+			var blurbID = $(this).next('.hoverDisplay').attr('id');
+			$("#"+blurbID).slideToggle();
+			hovered = true;
+		}
+	});
+
+	$(".muiristaPhoto > img").mouseout(function(){
+		if(hovered){
+			var blurbID = $(this).next('.hoverDisplay').attr('id');
+			$("#"+blurbID).slideToggle();
+			hovered = false;
+		}
+	});*/
 });
