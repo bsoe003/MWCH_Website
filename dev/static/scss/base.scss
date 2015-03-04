@@ -52,10 +52,13 @@ h1 {
 	font-weight: 400;
 	font-size: 3em;
 	color: $light-blue;
+//	display: inline-block;
+//	border-bottom: 5px solid $dark-blue;
 }
 
 h2 {
-	@extend h1;
+	font-family: $header-link-font;
+	font-weight: 400;
 	font-size: 1.875em;
 	color: $lilac;
 	margin-bottom: 12px;
