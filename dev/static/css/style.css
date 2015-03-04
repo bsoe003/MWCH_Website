@@ -356,6 +356,9 @@ form {
   background-size: cover; }
 
 #story-container {
+  width: 894px;
+  margin-right: auto;
+  margin-left: auto;
   padding-bottom: 90px; }
 
 html, body {
