@@ -21,11 +21,16 @@
     </div>
     <div id="muiristasBio">
     	<h2>Meet the Muiristas</h2>
-    	{% for muirista in muiristas %}
+    	{% for i in range(muiristas|length) %}
             <div class="muiristaWrapper">
-            	<img src="{{muirista['photo_url']}}">
+                <div class="muiristaPhoto">
+                    <img src="{{muiristas[i]['photo_url']}}">
+                    <div class="hoverDisplay" id="blurb{{i}}">
+                        <span>{{muiristas[i]['blurbs']}}</span>
+                    </div>
+                </div>
                 <div class = "muiristaText">
-                    {{muirista['name']}} <br/>
+                    {{muiristas[i]['name']}} <br/>
                 </div>
             </div>
     	{% endfor %}
