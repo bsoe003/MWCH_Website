@@ -48,15 +48,38 @@
 
 .muiristaWrapper {
 	float: left;
-	img {
-		width: 200px;
-		height: auto;
-	}
 	margin-left: 15px;
 	margin-right: 15px;
 }
 
+.muiristaPhoto {
+	position: relative;
+	display: block;
+}
+
+.muiristaPhoto > img {
+	width: 200px;
+	height: auto;
+}
+
+.hoverDisplay {
+	position: absolute;
+	background-color: rgba(255, 255, 252, 0.8);
+	display: none;
+	width: 180px;
+	min-height: 280px;
+	max-height: 280px;
+	top: 0;
+	padding: 10px 10px 10px 10px;
+	font-size: 0.8125em;
+}
+
+.muiristaPhoto:hover > .hoverDisplay {
+	display:block;
+}
+
 .muiristaText {
+	clear: both;
 	text-align: center;
 	margin-top: 3px;
 	margin-bottom: 10px;
