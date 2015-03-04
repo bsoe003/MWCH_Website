@@ -4,8 +4,9 @@
         <meta charset="UTF-8"/>
         {% block css %}
         <!-- Include All CSS Files here -->
-        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css' />
-        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,700italic' rel='stylesheet' type='text/css' />
+        <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'/>
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,700italic' rel='stylesheet' type='text/css'/>
+        <link href='http://fonts.googleapis.com/css?family=Spirax' rel='stylesheet' type='text/css'/>
         <link rel="stylesheet" href="css/style.css" />
         {% endblock %}
 
@@ -15,6 +16,11 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.1/jquery-ui.min.js"></script>
         <script type="text/javascript" src="js/script.js"></script>
         <script type="text/javascript" src="js/velocity.min.js"></script>
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <script type="text/javascript">alert("{{ messages[0] }}");</script>
+        {% endif %}
+        {% endwith %}
         <title>Muir Woods Coffee House</title>
         {% endblock %}
     </head>

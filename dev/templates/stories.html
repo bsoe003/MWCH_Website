@@ -11,19 +11,11 @@
         <div class="container" id="story-container">
         	<h1>Your Stories</h1>
         	{% for i in range(stories|length) %}
-        	{% if i%2 == 0 %}
-        	<div class="bubble leftBubble">
+        	<div class="bubble {% if i%2 == 0 %}leftBubble{% else %}rightBubble{% endif %}">
                 <div class="storyholder">
-                    “{{ stories[i].text }}”
+                    <span class="qmark">“</span>&nbsp;{{ stories[i].text }}&nbsp;<span class="qmark">”</span>
                 </div>
         	</div>
-        	{% else %}
-        	<div class="bubble rightBubble">
-                <div class="storyholder">
-                    “{{ stories[i].text }}”
-                </div>
-        	</div>
-        	{% endif %}
         	{% endfor %}
         </div>
     </div>

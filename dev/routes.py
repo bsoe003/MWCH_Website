@@ -36,16 +36,17 @@ def viewStories():
     if request.method == 'POST':
         text = request.form['q']
         date = datetime.now().strftime('%m/%d/%Y')
-        story = Stories(date=datetime.now(),text=text,approval=False)
+        story = Stories(date=datetime.now(),text=text,approval=True)
         db.session.add(story)
         db.session.commit()
+        print "Saved to Database"
         #msg = Message("New story has been submitted",
         #    sender="NoSLP", 
         #    recipients=["bsoe@ucsd.edu","dhyee@ucsd.edu","cvd001@ucsd.edu"])
         #msg.html = 'The following story needs an approval:<br/><br/>'\
         #    +'<b>Date:</b> '+date+'<br/><b>Story:</b> '+text+'<br/><br/>'
         #mail.send(msg)
-        flash("Your story has been submitted.")
+        #flash(u'Your story has been submitted.','success')
         return redirect('/stories')
     stories = Stories.query.filter(Stories.approval) \
         .order_by('date desc').all()
@@ -60,3 +61,7 @@ def viewGallery():
     return render_template('gallery.html',
         endpoint="gallery",
         photos=photos)
+
+@app.route('/approve', methods=['POST'])
+def approveStory():
+    pass
