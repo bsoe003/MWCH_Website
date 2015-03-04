@@ -329,6 +329,10 @@ form {
   right: -35px;
   top: 55px; }
 
+#story-background {
+  background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
+  background-size: cover; }
+
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
@@ -410,9 +414,6 @@ p {
 .selected {
   color: #D08B84;
   border-bottom: 3px solid #D08B84; }
-
-#wrapper {
-  padding-top: 150px; }
 
 #content {
   min-height: 100%; }

@@ -1,28 +1,30 @@
 {% extends "extras/base.html" %}
 {% block content %}
-    <div id="story_form">
-        <form method="post">
-            <textarea maxlength="250" oninput="charCheck(event)" id="q" name="q"></textarea>
-            <div id="charLimit"></div>
-            <input id="submit" type="submit" value="Submit">
-        </form>
-    </div>
-    <div class="container">
-    	<h1>Your Stories</h1>
-    	{% for i in range(stories|length) %}
-    	{% if i%2 == 0 %}
-    	<div class="bubble leftBubble">
-            <div class="storyholder">
-                “{{ stories[i].text }}”
-            </div>
-    	</div>
-    	{% else %}
-    	<div class="bubble rightBubble">
-            <div class="storyholder">
-                “{{ stories[i].text }}”
-            </div>
-    	</div>
-    	{% endif %}
-    	{% endfor %}
+    <div id="story-background">
+        <div id="story_form">
+            <form method="post">
+                <textarea maxlength="250" oninput="charCheck(event)" id="q" name="q"></textarea>
+                <div id="charLimit"></div>
+                <input id="submit" type="submit" value="Submit">
+            </form>
+        </div>
+        <div id="story-container">
+        	<h1>Your Stories</h1>
+        	{% for i in range(stories|length) %}
+        	{% if i%2 == 0 %}
+        	<div class="bubble leftBubble">
+                <div class="storyholder">
+                    “{{ stories[i].text }}”
+                </div>
+        	</div>
+        	{% else %}
+        	<div class="bubble rightBubble">
+                <div class="storyholder">
+                    “{{ stories[i].text }}”
+                </div>
+        	</div>
+        	{% endif %}
+        	{% endfor %}
+        </div>
     </div>
 {% endblock %}

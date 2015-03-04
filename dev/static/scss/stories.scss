@@ -4,7 +4,7 @@
 	width: 100%;
 	background-color: $light-purple;
 	height: 55px;
-	padding-top: 15px;
+	padding-top: 180px;
 	cursor: pointer;
 }
 
@@ -59,7 +59,7 @@ form {
 	position: relative;
 	width: 70%;
 	height: 80px;
-	margin-bottom: 35px;
+	margin-top: 35px;
 	color: white;
 	-webkit-border-radius: 5px;
 	-moz-border-radius: 5px;
@@ -100,7 +100,7 @@ form {
 .rightBubble {
 	background-color: $medium-brown;
 	margin-left: 30%;
-	text-align: right;
+	text-align: left;
 }
 
 .rightBubble:after 
@@ -115,4 +115,16 @@ form {
 	z-index: 1;
 	right: -35px;
 	top: 55px;
+}
+
+#story-background {
+	background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)),
+		url('../img/bg_pholder.jpg') no-repeat fixed;
+	background-size: cover;
+}
+
+#story-container {
+	width: 70%;
+	@extend %horizontal-align;
+	padding-bottom: 90px;
 }
