@@ -69,14 +69,19 @@
 
 #hours, #location {
 	width: 30%;
-	height: 30%;
+	height: 45%;
 	display: inline-block;
 }
 
 #hours {
+	padding-right: 10%;
 	p {
 		display: inline-block;
 	}
+}
+
+#day {
+	padding-right: 15px;
 }
 
 // Icons section

@@ -57,11 +57,16 @@
 
 #hours, #location {
   width: 30%;
-  height: 30%;
+  height: 45%;
   display: inline-block; }
 
-#hours p {
-  display: inline-block; }
+#hours {
+  padding-right: 10%; }
+  #hours p {
+    display: inline-block; }
+
+#day {
+  padding-right: 15px; }
 
 #icons {
   width: 100%;
@@ -329,16 +334,18 @@ a {
   color: inherit;
   text-decoration: none; }
 
-h1, h2, h2, p {
+h1, h2, p {
   text-align: center; }
 
-h1, h2 {
+h1 {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 3em;
   color: #AAD1CE; }
 
 h2 {
+  font-family: "Montserrat", "Helvetica Neue", sans-serif;
+  font-weight: 400;
   font-size: 1.875em;
   color: #D4C2D2;
   margin-bottom: 12px;
