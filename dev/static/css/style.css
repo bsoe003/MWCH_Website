@@ -6,10 +6,6 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-#story-container {
-  margin-left: auto;
-  margin-right: auto; }
-
 /*************** INDEX PAGE ***/
 #banner {
   background: #FFFFFC url("../img/banner_placeholder.jpg") no-repeat;
@@ -232,10 +228,6 @@
   -ms-transform: translateY(-50%);
   transform: translateY(-50%); }
 
-#story-container {
-  margin-left: auto;
-  margin-right: auto; }
-
 #story_form {
   width: 100%;
   background-color: #F6F3F3;
@@ -344,7 +336,6 @@ form {
   background-size: cover; }
 
 #story-container {
-  width: 70%;
   padding-bottom: 90px; }
 
 html, body {
