@@ -9,7 +9,7 @@
 }
 
 #about{
-	height: 454px;
+	height: 450px;
 	background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)),
 		url('../img/bg_pholder.jpg') no-repeat fixed;
 	background-size: cover;
@@ -20,6 +20,11 @@
 	float: left;
 	p{
 		@include center(70%);
+
+		span{
+			font-size: 1em;
+			font-weight: 400;	
+		}
 	}
 }
 
@@ -29,12 +34,16 @@
 	p{
 		@include center(70%);
 	}
+	span{
+		@include center(70%);
+		font-size: 1em;
+		font-weight: 400;	
+	}
 }
 
 #muiristasBio {
 	padding-top: 50px;
-	padding-bottom: 50px;
-	@include center(70%);
+	@include center(75%);
 }
 
 .muiristaWrapper {
@@ -43,8 +52,8 @@
 		width: 200px;
 		height: auto;
 	}
-	margin-left: 20px;
-	margin-right: 20px;
+	margin-left: 15px;
+	margin-right: 15px;
 }
 
 .muiristaText {
@@ -52,6 +61,7 @@
 	margin-top: 3px;
 	margin-bottom: 10px;
 	font-size: 1em;
+	font-weight: 400;
 }
 
 #sources{
@@ -60,4 +70,14 @@
 	background-color: $tan;
 	padding-top: 50px;
 	padding-bottom: 50px;
+}
+
+#centerSources{
+	@include center(90%);
+	img{
+		width: 250px;
+		height: auto;
+		margin-right: 10px;
+		margin-left: 10px;
+	}
 }
