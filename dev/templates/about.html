@@ -4,14 +4,19 @@
         <h1>A Whole<br/>Latte Love</h1>
     	<div id = "mission">
     		<h2>Our Mission</h2>
-    		<p>This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods. This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods.</p>
-            <span class = "standout">
-            
+    		<p>This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods. This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods.<br><br>
+            <span>
+                This is standout text--it has a regular font weight and it is two sizes larger than the body text. <br><br>
             </span>
+            This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods. This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods.</p>
     	</div>
     	<div id = "history">
     		<h2>Our History</h2>
-    		<p>This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods. This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods.</p>
+    		<p>This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods. This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods.<br><br>
+            <span>
+                This is standout text--it has a regular font weight and it is two sizes larger than the body text. <br><br>
+            </span>
+            This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods. This is a short paragraph of text--less than or equal to 250 words--describing the mission of Muir Woods.</p>
     	</div>
     </div>
     <div id="muiristasBio">
@@ -26,10 +31,12 @@
     	{% endfor %}
     </div>
     <div id = "sources">
+        <div id = "centerSources">
     	<h2>Where We Source From</h2>
     		{% for source in sources %}
-    			<img src="{{source['photo_url']}}">
+    			<a href="{{source['source_url']}}"><img src="{{source['photo_url']}}">
     		{% endfor %}
+        </div>
     </div>
 
 {% endblock %}

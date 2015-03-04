@@ -98,7 +98,7 @@
 
 /********* ABOUT PAGE ***********/
 #about {
-  height: 454px;
+  height: 450px;
   background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
   background-size: cover; }
 
@@ -109,6 +109,9 @@
     margin-left: auto;
     margin-right: auto;
     width: 70%; }
+    #mission p span {
+      font-size: 1em;
+      font-weight: 400; }
 
 #history {
   width: 50%;
@@ -117,18 +120,23 @@
     margin-left: auto;
     margin-right: auto;
     width: 70%; }
+  #history span {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    font-size: 1em;
+    font-weight: 400; }
 
 #muiristasBio {
   padding-top: 50px;
-  padding-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
-  width: 70%; }
+  width: 75%; }
 
 .muiristaWrapper {
   float: left;
-  margin-left: 20px;
-  margin-right: 20px; }
+  margin-left: 15px;
+  margin-right: 15px; }
   .muiristaWrapper img {
     width: 200px;
     height: auto; }
@@ -137,7 +145,8 @@
   text-align: center;
   margin-top: 3px;
   margin-bottom: 10px;
-  font-size: 1em; }
+  font-size: 1em;
+  font-weight: 400; }
 
 #sources {
   clear: both;
@@ -145,6 +154,16 @@
   background-color: #F9F7F1;
   padding-top: 50px;
   padding-bottom: 50px; }
+
+#centerSources {
+  margin-left: auto;
+  margin-right: auto;
+  width: 90%; }
+  #centerSources img {
+    width: 250px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: 10px; }
 
 /********* MENU PAGE ***********/
 #menuBlurb {
