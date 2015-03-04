@@ -102,16 +102,38 @@
 #muiristasBio {
   margin-left: auto;
   margin-right: auto;
-  width: 70%;
-  padding-top: 50px;
-  padding-bottom: 50px; }
-  #muiristasBio img {
-    width: 250px;
-    height: 375px;
-    margin-right: 2%;
-    margin-left: 2%; }
+  width: 70%; }
 
+.muiristaWrapper {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px; }
+  .muiristaWrapper img {
+    width: 250px;
+    height: 375px; }
+
+.muiristaText {
+  text-align: center;
+  margin-top: 3px;
+  margin-bottom: 10px; }
+
+/*#muiristasBio{
+	@include center(75%);
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+
+#muiristaPhoto{
+
+	img{
+		width: 250px;
+		height: 375px;
+		margin-right: 2%;
+		margin-left: 2%;
+	}
+}*/
 #sources {
+  clear: both;
   height: 392px;
   background-color: #F9F7F1;
   padding-top: 50px;
