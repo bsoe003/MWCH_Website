@@ -4,7 +4,8 @@ $(document).ready(function(){
 	var threshold = 10;
 	var shrinked = false;
 	var hovered = false;
-	var duration = 500;
+	var editable = false;
+	var duration = 400;
 	var charLimit = 250;
 
 	$("#submit").hide();
@@ -63,19 +64,52 @@ $(document).ready(function(){
 			shrink();
 		else if(shrinked && currTop <= threshold)
 			expand();
+		$("header").clearQueue();
+		$("#nav").clearQueue();
+		$("#logo").clearQueue();
+		$("#logo > a > img").clearQueue();
 		prevTop = currTop;
 	});
 
-	$("#story_form").click(function(){
-		$(this).velocity({
-			height: 165
-		});
-		$(this).css({"cursor":"auto"});
-		$("#q").velocity({
-			height: 70
-		});
-		$("#submit").delay(100).slideDown();
-		$("#charLimit").delay(100).slideDown();
+	$("#story_form").click(function(e){
+		if(!editable){
+			$(this).velocity({
+				height: 155
+			});
+			$(this).css({"cursor":"auto"});
+			$("#q").velocity({
+				height: 70
+			});
+			$("#submit").delay(100).slideDown();
+			$("#charLimit").delay(100).slideDown();
+			editable = true;
+		}
+	});
+
+	$(document).click(function(e){
+		var clicked = e.target.id != "story_form" 
+			&& e.target.id != "charLimit"
+			&& e.target.id != "submit"
+			&& e.target.id != "q";
+		if (editable && clicked) {
+			$("#story_form").velocity({
+				height: "55px"
+			});
+			$("#story_form").css({"cursor":"pointer"});
+			$("#q").velocity({
+				height: "20px"
+			});
+			$("#submit").delay(100).slideUp();
+			$("#charLimit").delay(100).slideUp();
+			editable = false;
+		}
+	});
+
+	$("#submit").click(function(){
+		if($("#q").val().length == 0) {
+			alert("Please write your story");
+			return false;
+		}
 	});
 
 	$("#q").keyup(function(){

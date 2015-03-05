@@ -162,7 +162,9 @@
   font-size: 0.8125em; }
 
 .muiristaPhoto:hover > .hoverDisplay {
-  display: block; }
+  display: block;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s; }
 
 .muiristaText {
   clear: both;
@@ -288,13 +290,13 @@ form {
   border: 1px solid #ababab;
   width: 96.5%;
   resize: none;
-  height: 5px;
+  height: 20px;
   font-family: inherit;
   font-size: inherit;
   -webkit-box-shadow: inset 2px 2px 2px 0px #dddddd;
   -moz-box-shadow: inset 2px 2px 2px 0px #dddddd;
   box-shadow: inset 2px 2px 2px 0px #dddddd;
-  padding: 15px 15px 15px 15px;
+  padding: 10px 15px 10px 15px;
   overflow: hidden; }
 
 .bubble {
@@ -306,7 +308,8 @@ form {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
-  padding: 15px 15px 15px 15px; }
+  padding: 15px 15px 15px 15px;
+  display: table; }
 
 .storyholder {
   border: 1px solid #FFFFFC;
@@ -316,11 +319,12 @@ form {
   height: 80px;
   padding-left: 10px;
   padding-right: 10px;
-  position: relative; }
+  position: relative;
+  display: table-cell;
+  vertical-align: middle; }
 
 .leftBubble {
-  background-color: #877770;
-  text-align: left; }
+  background-color: #877770; }
 
 .leftBubble:after {
   content: '';
@@ -336,8 +340,7 @@ form {
 
 .rightBubble {
   background-color: #6A5554;
-  margin-left: 30%;
-  text-align: left; }
+  margin-left: 30%; }
 
 .rightBubble:after {
   content: '';
@@ -351,6 +354,9 @@ form {
   right: -35px;
   top: 55px; }
 
+.qmark {
+  font-family: 'Spirax'; }
+
 #story-background {
   background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
   background-size: cover; }
@@ -361,6 +367,16 @@ form {
   margin-left: auto;
   padding-bottom: 90px; }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
@@ -438,6 +454,9 @@ p {
   margin-left: 45px;
   padding-bottom: 15px;
   border-bottom: 3px solid transparent; }
+
+.option:hover {
+  color: #D08B84; }
 
 .selected {
   color: #D08B84;
