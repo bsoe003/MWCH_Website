@@ -377,16 +377,6 @@ form {
     opacity: 0; }
   to {
     opacity: 1; } }
-@-webkit-keyframes hawt {
-  from {
-    color: inherit; }
-  to {
-    color: #D08B84; } }
-@keyframes hawt {
-  from {
-    color: inherit; }
-  to {
-    color: #D08B84; } }
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
@@ -464,11 +454,6 @@ p {
   margin-left: 45px;
   padding-bottom: 15px;
   border-bottom: 3px solid transparent; }
-
-.option:hover {
-  color: #D08B84;
-  -webkit-animation: hawt 0.4s;
-  animation: hawt 0.4s; }
 
 .selected {
   color: #D08B84;
