@@ -455,6 +455,9 @@ p {
   padding-bottom: 15px;
   border-bottom: 3px solid transparent; }
 
+.option:hover {
+  color: #D08B84; }
+
 .selected {
   color: #D08B84;
   border-bottom: 3px solid #D08B84; }

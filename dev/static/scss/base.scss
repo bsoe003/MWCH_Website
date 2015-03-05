@@ -107,6 +107,10 @@ p {
 	border-bottom: 3px solid transparent;
 }
 
+.option:hover {
+	color: $salmon;
+}
+
 .selected {
 	color: $salmon;
 	border-bottom: 3px solid $salmon;

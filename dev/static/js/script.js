@@ -5,7 +5,7 @@ $(document).ready(function(){
 	var shrinked = false;
 	var hovered = false;
 	var editable = false;
-	var duration = 500;
+	var duration = 400;
 	var charLimit = 250;
 
 	$("#submit").hide();
@@ -64,6 +64,10 @@ $(document).ready(function(){
 			shrink();
 		else if(shrinked && currTop <= threshold)
 			expand();
+		$("header").clearQueue();
+		$("#nav").clearQueue();
+		$("#logo").clearQueue();
+		$("#logo > a > img").clearQueue();
 		prevTop = currTop;
 	});
 

@@ -46,7 +46,7 @@ def viewStories():
         #msg.html = 'The following story needs an approval:<br/><br/>'\
         #    +'<b>Date:</b> '+date+'<br/><b>Story:</b> '+text+'<br/><br/>'
         #mail.send(msg)
-        #flash(u'Your story has been submitted.','success')
+        flash(u'Your story has been submitted.','success')
         return redirect('/stories')
     stories = Stories.query.filter(Stories.approval) \
         .order_by('date desc').all()
