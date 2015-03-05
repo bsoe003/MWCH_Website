@@ -162,7 +162,9 @@
   font-size: 0.8125em; }
 
 .muiristaPhoto:hover > .hoverDisplay {
-  display: block; }
+  display: block;
+  -webkit-animation: fadeIn 0.5s;
+  animation: fadeIn 0.5s; }
 
 .muiristaText {
   clear: both;
@@ -365,6 +367,26 @@ form {
   margin-left: auto;
   padding-bottom: 90px; }
 
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@keyframes fadeIn {
+  from {
+    opacity: 0; }
+  to {
+    opacity: 1; } }
+@-webkit-keyframes hawt {
+  from {
+    color: inherit; }
+  to {
+    color: #D08B84; } }
+@keyframes hawt {
+  from {
+    color: inherit; }
+  to {
+    color: #D08B84; } }
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
@@ -442,6 +464,11 @@ p {
   margin-left: 45px;
   padding-bottom: 15px;
   border-bottom: 3px solid transparent; }
+
+.option:hover {
+  color: #D08B84;
+  -webkit-animation: hawt 0.4s;
+  animation: hawt 0.4s; }
 
 .selected {
   color: #D08B84;

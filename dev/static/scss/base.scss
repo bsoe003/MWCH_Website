@@ -5,6 +5,16 @@
 @import "gallery";
 @import "stories";
 
+@-webkit-keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+      to { opacity: 1; }
+}
+
 html, body {
 	font-family: $body-font;
 	font-size: 100%;
