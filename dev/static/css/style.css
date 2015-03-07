@@ -196,7 +196,7 @@
 /********* MENU PAGE ***********/
 #menuBlurb {
   text-align: center;
-  height: 200px;
+  height: 170px;
   /* temp */
   margin-left: auto;
   margin-right: auto;
@@ -417,7 +417,7 @@ h1, h2, p {
 h1 {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 3em;
+  font-size: 4em;
   color: #AAD1CE; }
 
 h2 {

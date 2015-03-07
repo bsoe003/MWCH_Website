@@ -8,7 +8,7 @@
                 <input id="submit" type="submit" value="Submit">
             </form>
         </div>
-        <div class="container" id="story-container">
+        <div id="story-container">
         	<h1>Your Stories</h1>
         	{% for i in range(stories|length) %}
         	<div class="bubble {% if i%2 == 0 %}leftBubble{% else %}rightBubble{% endif %}">
