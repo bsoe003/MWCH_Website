@@ -115,6 +115,10 @@ $(document).ready(function(){
 	$("#q").keyup(function(){
 		charCheck();
 	});
+	
+	$("#q").keydown(function(){
+		charCheck();
+	});
 
 	function charCheck(){
 		var length = $("#q").val().length;
