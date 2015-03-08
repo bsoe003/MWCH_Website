@@ -1,43 +1,48 @@
 {% extends "extras/base.html" %}
 {% block content %}
-    <div id = "about">
-        <h1>A Whole<br/>Latte Love</h1>
-    	<div id = "mission">
-    		<h2>Our Mission</h2>
-            <p>Muir Woods strives to provide a positive experience and quality product.  We carry fair trade coffee from an award winning local roaster, organic loose leaf teas, and a selection of pastries from a local bakery.<br/><br/>
-            <span>We work to embody individuals from all backgrounds, interests, and places in life and create the opportunity to make unexpected connections and friendships.<br/><br/></span>
-            We are a space run by students for other students and we hope to foster a sense of community that is unparalleled on this campus.</p>
-    	</div>
-    	<div id = "history">
-    		<h2>Our History</h2>
-            <p>Four score and 7 years ago on a dark and stormy night eighteen men and women were huddled in a small, moist, dark room looking for answers. The very room in question is the space we now call our supply closet.<br/><br/>
-            <span>It was on this night that a bright idea was born, an idea so revolutionary that it has continued to grow daily since its inception.<br/><br/></span>
-            Although many thought this task seemed far too daunting and was seemingly impossible, we have risen against all odds and remained a strong force on campus. Many enemies continue to sabotage our establishment, but we have continued to remain victorious. Come joinus in our valiant fight.</p>
-    	</div>
+<div id="about">
+    <h1>A Whole<br/>Latte Love</h1>
+    <div id="mission">
+        <h2>Our Mission</h2>
+        <p>Muir Woods strives to provide a positive experience and quality product. We carry fair trade coffee from an award winning local roaster, organic loose leaf teas, and a selection of pastries from a local bakery.
+            <br/>
+            <br/>
+            <span>We work to embody individuals from all backgrounds, interests, and places in life and create the opportunity to make unexpected connections and friendships.<br/><br/></span> We are a space run by students for other students and we hope to foster a sense of community that is unparalleled on this campus.</p>
     </div>
-    <div id="muiristasBio">
-    	<h2>Meet the Muiristas</h2>
-    	{% for i in range(muiristas|length) %}
-            <div class="muiristaWrapper">
-                <div class="muiristaPhoto">
-                    <img src="{{muiristas[i]['photo_url']}}">
-                    <div class="hoverDisplay" id="blurb{{i}}">
-                        <span>{{muiristas[i]['blurbs']}}</span>
-                    </div>
-                </div>
-                <div class = "muiristaText">
-                    {{muiristas[i]['name']}} <br/>
+    <div id="history">
+        <h2>Our History</h2>
+        <p>Four score and 7 years ago on a dark and stormy night eighteen men and women were huddled in a small, moist, dark room looking for answers. The very room in question is the space we now call our supply closet.
+            <br/>
+            <br/>
+            <span>It was on this night that a bright idea was born, an idea so revolutionary that it has continued to grow daily since its inception.<br/><br/></span> Although many thought this task seemed far too daunting and was seemingly impossible, we have risen against all odds and remained a strong force on campus. Many enemies continue to sabotage our establishment, but we have continued to remain victorious. Come joinus in our valiant fight.</p>
+    </div>
+</div>
+<div id="muiristasBio">
+    <h2>Meet the Muiristas</h2>
+    <div id="muiristasContent">
+        {% for i in range(muiristas|length) %}
+        <div class="muiristaWrapper">
+            <div class="muiristaPhoto">
+                <img src="{{muiristas[i]['photo_url']}}">
+                <div class="hoverDisplay" id="blurb{{i}}">
+                    <span>{{muiristas[i]['blurbs']}}</span>
                 </div>
             </div>
-    	{% endfor %}
-    </div>
-    <div id = "sources">
-        <h2>Where We Source From</h2>
-        <div id = "centerSources">
-    		{% for source in sources %}
-    			<a href="{{source['source_url']}}"><img src="{{source['photo_url']}}">
-    		{% endfor %}
+            <div class="muiristaText">
+                {{muiristas[i]['name']}}
+                <br/>
+            </div>
         </div>
+        {% endfor %}
     </div>
+</div>
+<div id="sources">
+    <h2>Where We Source From</h2>
+    <div id="centerSources">
+        {% for source in sources %}
+        <a href="{{source['source_url']}}" target="_blank"><img src="{{source['photo_url']}}" /></a>
+        {% endfor %}
+    </div>
+</div>
 
 {% endblock %}

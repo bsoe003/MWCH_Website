@@ -103,8 +103,11 @@
 /********* ABOUT PAGE ***********/
 #about {
   height: 450px;
+  max-height: 1000px;
+  margin-top: -40px;
   background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
-  background-size: cover; }
+  background-size: cover;
+  clear: both; }
 
 #mission {
   width: 50%;
@@ -131,10 +134,15 @@
     font-size: 1em;
     font-weight: 400; }
 
+#history:after {
+  clear: both; }
+
 #muiristasBio {
-  padding-top: 50px;
-  margin-left: auto;
-  margin-right: auto;
+  clear: both;
+  padding-top: 50px; }
+
+#muiristasContent {
+  overflow: hidden;
   width: 75%; }
 
 .muiristaWrapper {
@@ -143,8 +151,7 @@
   margin-right: 15px; }
 
 .muiristaPhoto {
-  position: relative;
-  display: block; }
+  position: relative; }
 
 .muiristaPhoto > img {
   width: 200px;
@@ -162,7 +169,8 @@
   font-size: 0.8125em; }
 
 .muiristaPhoto:hover > .hoverDisplay {
-  display: block;
+  display: table-cell;
+  vertical-alignment: middle;
   -webkit-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s; }
 
@@ -176,28 +184,29 @@
 
 #sources {
   clear: both;
-  height: 392px;
   background-color: #F9F7F1;
   padding-top: 50px;
   padding-bottom: 50px; }
 
 #centerSources {
-  padding-top: 50px;
-  position: absolute;
+  padding-top: 25px;
+  /*position: absolute;
   left: 50%;
   right: 50%;
-  margin: 0 -550px 0 -550px; }
+  margin: 0 -550px 0 -550px;*/
+  text-align: center;
+  overflow: hidden; }
   #centerSources img {
     width: 250px;
     height: auto;
+    margin-top: 10px;
     margin-right: 10px;
     margin-left: 10px; }
 
 /********* MENU PAGE ***********/
 #menuBlurb {
   text-align: center;
-  height: 170px;
-  /* temp */
+  margin-bottom: 50px;
   margin-left: auto;
   margin-right: auto;
   width: 50%; }
@@ -453,13 +462,17 @@ p {
   float: left;
   margin-left: 45px;
   padding-bottom: 15px;
-  border-bottom: 3px solid transparent; }
+  border-bottom: 3px solid transparent;
+  /*cursor: pointer;*/ }
 
-.option:hover {
-  color: #D08B84; }
+.option > a {
+  transition: color 0.2s ease-in-out; }
+
+.option > a:hover, .selected {
+  color: #D08B84;
+  /*border-bottom: 3px solid $salmon;*/ }
 
 .selected {
-  color: #D08B84;
   border-bottom: 3px solid #D08B84; }
 
 #wrapper {
@@ -491,5 +504,27 @@ p {
 
 .left-side {
   float: left; }
+
+#mobile {
+  display: none;
+  visibility: hidden;
+  margin-top: 55px;
+  margin-right: 100px;
+  float: right; }
+  #mobile svg {
+    transition: fill 0.2s ease-in-out;
+    cursor: pointer; }
+
+#mobile > svg:hover {
+  fill: #D08B84; }
+
+@media (max-width: 905px) {
+  #mobile {
+    display: inline;
+    visibility: visible; }
+
+  #nav {
+    display: none;
+    visibility: hidden; } }
 
 /*# sourceMappingURL=style.css.map */
