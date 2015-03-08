@@ -13,7 +13,12 @@ from dev import app, db, models, loader, mail
 @app.route('/')
 def viewIndex():
     """ Renders homepage """
-    return render_template('index.html', endpoint="home")
+    Stories = models.Stories
+    stories = Stories.query.filter(Stories.approval) \
+        .order_by('date desc').all()
+    return render_template('index.html', 
+        endpoint="home",
+        stories=stories)
 
 @app.route('/about')
 def viewAbout():
