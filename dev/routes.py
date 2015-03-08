@@ -9,6 +9,7 @@ from flask import *
 from flask.ext.mail import Message
 from datetime import datetime
 from dev import app, db, models, loader, mail
+import zlib
 
 @app.route('/')
 def viewIndex():
@@ -47,9 +48,10 @@ def viewStories():
         print "Saved to Database"
         #msg = Message("New story has been submitted",
         #    sender="NoSLP", 
-        #    recipients=["bsoe@ucsd.edu","dhyee@ucsd.edu","cvd001@ucsd.edu"])
+        #    recipients=["bsoe@ucsd.edu"])
         #msg.html = 'The following story needs an approval:<br/><br/>'\
-        #    +'<b>Date:</b> '+date+'<br/><b>Story:</b> '+text+'<br/><br/>'
+        #    +'<b>Date:</b> '+date+'<br/><b>Story:</b> '+text+'<br/><br/>'\
+        #    +'<a href="localhost:5000/approve?id='+str(story.id)+'">Click here to approve</a>'
         #mail.send(msg)
         flash(u'Your story has been submitted.','success')
         return redirect('/stories')
@@ -67,6 +69,12 @@ def viewGallery():
         endpoint="gallery",
         photos=photos)
 
-@app.route('/approve', methods=['POST'])
+@app.route('/approve')
 def approveStory():
+    stories = models.Stories.query.all()
+    for story in stories:
+        if story.id == int(request.form['id']):
+            print story.approval
+            story.approval = True
+    db.session.commit()
     pass
