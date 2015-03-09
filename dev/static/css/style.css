@@ -140,7 +140,7 @@
 
 #muiristasContent {
   overflow: hidden;
-  width: 75%; }
+  max-width: 1000px; }
 
 .muiristaWrapper {
   float: left;
