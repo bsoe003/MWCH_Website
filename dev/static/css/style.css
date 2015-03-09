@@ -110,28 +110,25 @@
 
 /********* ABOUT PAGE ***********/
 #about {
-  height: 300px;
-  /*overriden by about.js*/
   max-height: 1000px;
   margin-top: -40px;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg_about.jpg") no-repeat fixed;
   background-size: cover;
   clear: both;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  overflow: auto; }
+  overflow-x: hidden;
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 #mission, #history {
   width: 50%;
-  float: left;
-  height: 300px; }
+  float: left; }
   #mission p, #history p {
     margin-left: auto;
     margin-right: auto;
-    width: 70%; }
+    width: 75%; }
     #mission p span, #history p span {
-      font-size: 16px;
+      font-size: 14px;
       font-weight: 400; }
 
 #history:after {
@@ -161,11 +158,11 @@
   position: absolute;
   background-color: rgba(255, 255, 252, 0.8);
   display: none;
-  width: 180px;
+  width: 170px;
   min-height: 280px;
   max-height: 280px;
   top: 0;
-  padding: 10px 10px 10px 10px;
+  padding: 15px;
   font-size: 0.8125em; }
 
 .muiristaPhoto:hover > .hoverDisplay {
@@ -548,6 +545,16 @@ form {
     opacity: 0; }
   to {
     opacity: 1; } }
+@-webkit-keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
+@keyframes fadeOut {
+  from {
+    opacity: 1; }
+  to {
+    opacity: 0; } }
 html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
