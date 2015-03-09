@@ -33,7 +33,11 @@
                 </div>
             </div>
             <div class="muiristaText">
-                {{muiristas[i]['name']}}
+                <span class="muiristaName">{{muiristas[i]['name']}}</span>
+                <br/>
+                {% if muiristas[i]['title'] %}
+                <span class="muiristaTitle">{{muiristas[i]['title']}}</span>
+                {% endif %}
                 <br/>
             </div>
         </div>

@@ -179,8 +179,13 @@
   text-align: center;
   margin-top: 3px;
   margin-bottom: 10px;
-  font-size: 1em;
+  font-size: 1em; }
+
+.muiristaName {
   font-weight: 400; }
+
+.muiristaTitle {
+  font-size: 0.85em; }
 
 #sources {
   clear: both;
