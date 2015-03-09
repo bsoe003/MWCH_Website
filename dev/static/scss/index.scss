@@ -49,7 +49,7 @@
 // Stories section
 #storiesPreview {
     height: 280px;
-    background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(255, 255, 252, 0.85), rgba(255, 255, 252, 0.85)), url("../img/bg_indexstory.jpg") no-repeat fixed;
     background-size: cover;
 }
 
@@ -126,4 +126,8 @@
 
 .white-text {
     color: $off-white;
+}
+
+#banner-wrapper {
+    padding-top: 50px;
 }

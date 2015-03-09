@@ -9,37 +9,33 @@
 }
 
 #about {
-    height: 450px;
+    height: 300px; /*overriden by about.js*/
     max-height: 1000px;
     margin-top: -40px;
-    background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(255, 255, 252, 0.85), rgba(255, 255, 252, 0.85)), url("../img/bg_about.jpg") no-repeat fixed;
     background-size: cover;
     clear: both;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto;
 }
 
 #mission {
     width: 50%;
     float: left;
+    height: 300px;
     p {
         @include center(70%);
         span {
-            font-size: 1em;
+            font-size: 16px;
             font-weight: 400;
         }
     }
 }
 
 #history {
-    width: 50%;
-    float: right;
-    p {
-        @include center(70%);
-    }
-    span {
-        @include center(70%);
-        font-size: 1em;
-        font-weight: 400;
-    }
+    @extend #mission;
 }
 
 #history:after {
