@@ -1,5 +1,5 @@
-photo_url	source_url
-img/sources/1.png	http://cafevirtuoso.com/
-img/sources/2.png	http://www.bakedinthesun.com/
-img/sources/3.png	http://www.marysenglishkitchen.com/
-img/sources/4.png	https://www.teagallerie.com/
+photo_url	source_url	name
+img/sources/1.png	http://cafevirtuoso.com/	Cafe Virtuoso
+img/sources/2.png	http://www.bakedinthesun.com/	Baked in the Sun
+img/sources/3.png	http://www.marysenglishkitchen.com/	Mary's English Kitchen
+img/sources/4.png	https://www.teagallerie.com/	Tea Gallerie
