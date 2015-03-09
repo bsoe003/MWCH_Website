@@ -3,7 +3,9 @@ $(document).ready(function() {
     centerBio();
 
     function adjustAbout() {
-        $("#about").height($("#history").height() + 100);
+        //console.log($("#history").height());
+        console.log($("#about").height());
+        //$("#about").height($("#history").height()+);
     }
 
     function centerBio() {

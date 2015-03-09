@@ -9,29 +9,33 @@
 }
 
 #about {
-    height: 300px; /*overriden by about.js*/
+    //height: 300px; /*overriden by about.js*/
     max-height: 1000px;
     margin-top: -40px;
     background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url("../img/bg_about.jpg") no-repeat fixed;
     background-size: cover;
     clear: both;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: auto;
+    //justify-content: center;
+    //align-items: center;
+    overflow-x: hidden;
+    padding-top: 40px;
+    padding-bottom: 40px;
 }
 
 #mission {
     width: 50%;
     float: left;
-    height: 300px;
+    //height: 300px;
     p {
-        @include center(70%);
+        @include center(75%);
         span {
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
         }
     }
+    //margin-top: 200px;
+    //margin-bottom: 100px;
 }
 
 #history {
@@ -71,11 +75,11 @@
     position: absolute;
     background-color: rgba(255, 255, 252, 0.8);
     display: none;
-    width: 180px;
+    width: 170px;
     min-height: 280px;
     max-height: 280px;
     top: 0;
-    padding: 10px 10px 10px 10px;
+    padding: 15px;
     font-size: 0.8125em;
 }
 
@@ -126,7 +130,6 @@
     overflow: hidden;
 }
 
-
 /*.grid {
     position: relative;
     margin: 0 auto;
@@ -135,13 +138,12 @@
     list-style: none;
     text-align: center;
 }*/
-
 /* Common style */
 /*.grid figure {
     position: relative;
     float: left;
     overflow: hidden;*/
-    /*margin: 10px 1%;*/
+/*margin: 10px 1%;*/
 /*    width: 250px;
     max-height: 167px;
     background: #3085a3;
@@ -179,7 +181,6 @@
     width: 100%;
     height: 100%;
 }*/
-
 /* Anchor will cover the whole item by default */
 /* For some effects it will show as a button */
 /*.grid figure figcaption > a {
@@ -208,11 +209,9 @@
     letter-spacing: 1px;
     font-size: 68.5%;
 }*/
-
 /*---------------*/
 /***** Bubba *****/
 /*---------------*/
-
 /*figure.effect-bubba {
     background: #9e5406;
 }
