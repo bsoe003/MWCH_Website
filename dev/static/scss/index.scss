@@ -1,130 +1,129 @@
 /*************** INDEX PAGE ***/
-@mixin center($width){
-	margin: {
-		left: auto;
-		right: auto;
-	}
-	width: $width;
+@mixin center($width) {
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    width: $width;
 }
 
 #banner {
-	background: $off-white url('../img/banner_placeholder.jpg') no-repeat;
-	background-size: cover;
-	width: 100%;
-	min-height: 400px;
-	border-bottom: 5px solid $dark-blue;
+    background: $off-white url("../img/banner_placeholder.jpg") no-repeat;
+    background-size: cover;
+    width: 100%;
+    min-height: 400px;
+    border-bottom: 5px solid $dark-blue;
 }
 
 // First Section
 #debrief {
-	height: 200px;
-	background-color: $off-white;
-	p {
-		font-size: 1.125em;
-		@include center(70%);
-		@extend %vertical-align;
-	}
+    height: 200px;
+    background-color: $off-white;
+    p {
+        font-size: 1.125em;
+        @include center(70%);
+        @extend %vertical-align;
+    }
 }
 
 // Specials section
 #specials {
-	height: 380px;
-	background-color: $off-white;
-	img {
-		width: 50%;
-		height: 100%;
-	}
+    height: 380px;
+    background-color: $off-white;
+    img {
+        width: 50%;
+        height: 100%;
+    }
 }
 
 .blurb {
-	width: 50%;
-	height: 100%;
-	background-color: $dark-brown;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    width: 50%;
+    height: 100%;
+    background-color: $dark-brown;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 // Stories section
 #storiesPreview {
-	height: 280px;
-	background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)),
-		url('../img/bg_pholder.jpg') no-repeat fixed;
-	background-size: cover;
+    height: 280px;
+    background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
+    background-size: cover;
 }
 
 #story-content {
-	@extend %vertical-align;
-	@include center(99%);
-	text-align: center;
+    @extend %vertical-align;
+    @include center(99%);
+    text-align: center;
 }
 
 .story {
-	p {
-		width: 230px;
-		padding: 0px 3em;
-		display: inline-block;
-	}
+    p {
+        width: 230px;
+        padding: 0px 3em;
+        display: inline-block;
+    }
 }
 
 // Location and Hours section
 #locationHours {
-	@extend #specials;
+    @extend #specials;
 }
 
 #hours, #location {
-	width: 200px;
-	height: 45%;
-	display: inline-block;
+    width: 200px;
+    height: 45%;
+    display: inline-block;
 }
 
 #hours {
-	padding-right: 10%;
-	p {
-		display: inline-block;
-	}
+    padding-right: 10%;
+    p {
+        display: inline-block;
+    }
 }
 
 #day {
-	padding-right: 15px;
+    padding-right: 15px;
 }
 
 // Icons section
 #icons {
-	width: 100%;
-	height: 330px;
-	background-color: $off-white;
+    width: 100%;
+    height: 330px;
+    background-color: $off-white;
 }
 
 #icon-content {
-	@extend %vertical-align;
-	@include center(90%);
-	text-align: center;
-	p {
-		width: 45%;
-		display: inline-block;
-	}
+    @extend %vertical-align;
+    @include center(90%);
+    text-align: center;
+    p {
+        width: 45%;
+        display: inline-block;
+    }
 }
 
 #icon-logo {
-	@include center(90%);
-	img {
-		display: inline-block;
-		padding: 0px 10px 10px 10px;
-	}
+    @include center(90%);
+    img {
+        display: inline-block;
+        padding: 0px 10px 10px 10px;
+    }
 }
 
 .icon-resize {
-	width: auto;
-	height: 100px;
+    width: auto;
+    height: 100px;
 }
 
 // Random Redundant/Hacky Styling
 .left-text {
-	text-align: left;
+    text-align: left;
 }
 
 .white-text {
-	color: $off-white;
+    color: $off-white;
 }

@@ -21,13 +21,13 @@
     <script type="text/javascript" src="js/velocity.min.js"></script>
     {% endblock %}
 
-    {% with messages = get_flashed_messages() %}
-    {% if messages %}
+    {%- with messages = get_flashed_messages() -%}
+    {%- if messages -%}
     <script type="text/javascript">
     //alert("{{ messages[0] }}");
     </script>
-    {% endif %}
-    {% endwith %}
+    {%- endif -%}
+    {%- endwith -%}
 
     <title>Muir Woods Coffee House</title>
 </head>
@@ -87,6 +87,8 @@
         </div>
         <div id="copyright">
             &copy; 2015 Muir Woods Coffee House | John Muir College | UC San Diego
+            <!--<br/>-->
+            <!--&copy; 2015 Muir Woods Coffee House&nbsp;&nbsp;&bull;&nbsp;&nbsp;John Muir College&nbsp;&nbsp;&bull;&nbsp;&nbsp;UC San Diego-->
         </div>
     </footer>
 </body>

@@ -1,22 +1,25 @@
 {% extends "extras/base.html" %}
+{% block js %}
+{{ super() }}
+<script type="text/javascript" src="js/stories.js"></script>
+{% endblock %}
 {% block content %}
-    <div id="story-background">
-        <div id="story_form">
-            <form method="post">
+<div id="story-background">
+    <div id="story_form">
+        <form method="post">
             <textarea placeholder="Tell us your Muir Woods story..." maxlength="250" oninput="charCheck(event)" id="q" name="q"></textarea>
-                <div id="charLimit"></div>
-                <input id="submit" type="submit" value="Submit">
-            </form>
-        </div>
-        <div id="story-container">
-        	<h1>Your Stories</h1>
-        	{% for i in range(stories|length) %}
-        	<div class="bubble {% if i%2 == 0 %}leftBubble{% else %}rightBubble{% endif %}">
-                <div class="storyholder">
-                    <span class="qmark">“</span>&nbsp;{{ stories[i].text }}&nbsp;<span class="qmark">”</span>
-                </div>
-        	</div>
-        	{% endfor %}
-        </div>
+            <div id="charLimit"></div>
+            <input id="submit" type="submit" value="Submit">
+        </form>
     </div>
+    <div id="story-container">
+        <h1>Your Stories</h1> {% for i in range(stories|length) %}
+        <div class="bubble {% if i%2 == 0 %}leftBubble{% else %}rightBubble{% endif %}">
+            <div class="storyholder">
+                <span class="qmark">“</span>&nbsp;{{ stories[i].text }}&nbsp;<span class="qmark">”</span>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}

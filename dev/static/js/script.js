@@ -3,18 +3,9 @@ $(document).ready(function() {
     var prevTop = $(window).scrollTop();
     var threshold = 10;
     var shrinked = false;
-    var hovered = false;
-    var editable = false;
+    //var hovered = false;
     var duration = 400;
-    var charLimit = 250;
-    var muiristaWidth = 230; // recalculate when image and margin with changed.
-    var sourceWidth = 270;
 
-    $("#submit").hide();
-    $('#charLimit').hide();
-    $('#charLimit').html('<b>' + charLimit + '</b> characters remaining');
-    $("#about").height($("#history").height() + 225);
-    centerBio();
     pushFooter();
     /*$("#content").hide().fadeIn(600);
     $("footer").hide().fadeIn(600);*/
@@ -63,25 +54,6 @@ $(document).ready(function() {
             marginTop: "55px"
         });
         shrinked = false;
-    }
-
-    function charCheck() {
-        var length = $("#q").val().length;
-        var remaining = charLimit - length;
-        $('#charLimit').html('<b>' + remaining + '</b> characters remaining');
-        if (remaining <= 10) {
-            $('#charLimit').addClass("applyRed");
-        } else {
-            $('#charLimit').removeClass("applyRed");
-        }
-    }
-
-    function centerBio() {
-        var lambda = parseInt($("#muiristasContent").width() / muiristaWidth);
-        var spaces = $(window).width() - lambda * muiristaWidth;
-        $("#muiristasContent").css({
-            "marginLeft": parseInt(spaces / 2)
-        });
     }
 
     function pushFooter() {
@@ -136,64 +108,10 @@ $(document).ready(function() {
     });
 
     $(window).resize(function() {
-        $("#about").height($("#history").height() + 225);
-        centerBio();
         pushFooter();
     });
 
-    $("#story_form").click(function(e) {
-        if (!editable) {
-            $(this).velocity({
-                height: 155
-            });
-            $(this).css({
-                "cursor": "auto"
-            });
-            $("#q").velocity({
-                height: 70
-            });
-            $("#submit").delay(100).slideDown();
-            $("#charLimit").delay(100).slideDown();
-            editable = true;
-        }
-    });
-
-    $(document).click(function(e) {
-        var clicked_one = e.target.id != "story_form" && e.target.id != "charLimit";
-        var clicked_two = e.target.id != "submit" && e.target.id != "q";
-        var clicked = clicked_one && clicked_two;
-        if (editable && clicked) {
-            $("#story_form").velocity({
-                height: "55px"
-            });
-            $("#story_form").css({
-                "cursor": "pointer"
-            });
-            $("#q").velocity({
-                height: "20px"
-            });
-            $("#submit").delay(100).slideUp();
-            $("#charLimit").delay(100).slideUp();
-            editable = false;
-        }
-    });
-
-    $("#submit").click(function() {
-        if ($("#q").val().length == 0) {
-            alert("Please write your story");
-            return false;
-        }
-    });
-
-    $("#q").keyup(function() {
-        charCheck();
-    });
-
-    $("#q").keydown(function() {
-        charCheck();
-    });
-
-    $(".option").click(function() {
+    /*$(".option").click(function() {
         switch ($(this).text().trim()) {
             case "ABOUT":
                 window.location = "/about";
@@ -211,7 +129,7 @@ $(document).ready(function() {
                 window.location = "/";
                 break;
         }
-    });
+    });*/
 
     /*$(".option").mouseenter(function() {
         lastHovered = $(this);

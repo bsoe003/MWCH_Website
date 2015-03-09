@@ -1,4 +1,8 @@
 {% extends "extras/base.html" %}
+{% block js %}
+{{ super() }}
+<script type="text/javascript" src="js/about.js"></script>
+{% endblock %}
 {% block content %}
 <div id="about">
     <h1>A Whole<br/>Latte Love</h1>
@@ -40,7 +44,9 @@
     <h2>Where We Source From</h2>
     <div id="centerSources">
         {% for source in sources %}
-        <a href="{{source['source_url']}}" target="_blank"><img src="{{source['photo_url']}}" /></a>
+        <a href="{{source['source_url']}}" target="_blank">
+            <img src="{{source['photo_url']}}" />
+        </a>
         {% endfor %}
     </div>
 </div>

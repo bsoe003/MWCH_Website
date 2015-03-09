@@ -1,31 +1,31 @@
 /********* MENU PAGE ***********/
-@mixin center($width){
-	margin: {
-		left: auto;
-		right: auto;
-	}
-	width: $width;
+@mixin center($width) {
+    margin: {
+        left: auto;
+        right: auto;
+    };
+    width: $width;
 }
 
-#menuBlurb{
-	text-align: center;
-	margin-bottom: 50px;
-	@include center(50%);
+#menuBlurb {
+    text-align: center;
+    margin-bottom: 50px;
+    @include center(50%);
 }
 
-#menuContainer{
-	background-color: #464c44;
-	background-size: contain;
-	width: inherit;
-	padding: 10px;
-	margin-bottom: 100px;
+#menuContainer {
+    background-color: #464c44;
+    background-size: contain;
+    width: inherit;
+    padding: 10px;
+    margin-bottom: 100px;
 }
 
-#menuImg{
-	background:url('../img/menu.png');
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	min-height: 650px;
-	width: 100%;
+#menuImg {
+    background: url("../img/menu.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    min-height: 650px;
+    width: 100%;
 }

@@ -4,6 +4,7 @@
 @import "menu";
 @import "gallery";
 @import "stories";
+
 @-webkit-keyframes fadeIn {
     from {
         opacity: 0;
@@ -12,6 +13,8 @@
         opacity: 1;
     }
 }
+
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -20,17 +23,19 @@
         opacity: 1;
     }
 }
+
+
 html, body {
     font-family: $body-font;
     font-size: 100%;
     color: $off-black;
     font-weight: 300;
     background-color: $off-white;
-    /*	font-size: 14px;*/
-    
+    ///*  font-size: 14px;*/
     margin: 0;
     padding: 0;
 }
+
 header {
     font-family: $header-link-font;
     background-color: $off-white;
@@ -42,6 +47,7 @@ header {
     left: 0;
     z-index: 9999;
 }
+
 footer {
     clear: both;
     position: relative;
@@ -51,21 +57,25 @@ footer {
     background-color: $off-black;
     color: white;
 }
+
 a {
     color: inherit;
     text-decoration: none;
 }
+
 h1, h2, p {
     text-align: center;
 }
+
 h1 {
     font-family: $header-link-font;
     font-weight: 400;
     font-size: 4em;
     color: $light-blue;
-    //	display: inline-block;
-    //	border-bottom: 5px solid $dark-blue;
+    //  display: inline-block;
+    //  border-bottom: 5px solid $dark-blue;
 }
+
 h2 {
     font-family: $header-link-font;
     font-weight: 400;
@@ -74,6 +84,7 @@ h2 {
     margin-bottom: 12px;
     margin-top: 0;
 }
+
 p {
     font-family: $body-font;
     font-weight: 300;
@@ -81,20 +92,24 @@ p {
     color: $off-black;
     margin: 0;
 }
+
 #logo {
     float: left;
     margin-left: 100px;
     padding-top: 25px;
 }
+
 #logo > a > img {
     height: 100px;
 }
+
 #nav {
     float: right;
     display: inline-block;
     margin-right: 100px;
     margin-top: 65px;
 }
+
 .option {
     float: left;
     margin-left: 45px;
@@ -102,33 +117,41 @@ p {
     border-bottom: 3px solid transparent;
     /*cursor: pointer;*/
 }
+
 .option > a {
     transition: color 0.2s ease-in-out;
 }
+
 .option > a:hover, .selected {
     color: $salmon;
     /*border-bottom: 3px solid $salmon;*/
 }
+
 .selected {
     border-bottom: 3px solid $salmon;
 }
+
 #wrapper {
     padding-top: 150px;
-    //	padding-bottom: 10px;
+    //  padding-bottom: 10px;
 }
+
 #content {
     min-height: 100%;
 }
+
 #media {
     float: left;
     margin-top: 25px;
     display: inline;
     margin-left: 100px;
 }
+
 #media > a > img {
     width: 20px;
     margin-right: 15px;
 }
+
 #copyright {
     float: right;
     text-align: right;
@@ -137,12 +160,15 @@ p {
     font-size: 0.75em;
     margin-right: 100px;
 }
+
 .right-side {
     float: right;
 }
+
 .left-side {
     float: left;
 }
+
 #mobile {
     display: none;
     visibility: hidden;
@@ -150,14 +176,16 @@ p {
     margin-right: 100px;
     float: right;
     svg {
-    	transition: fill 0.2s ease-in-out;
-    	cursor: pointer;
+        transition: fill 0.2s ease-in-out;
+        cursor: pointer;
     }
 }
+
 #mobile > svg:hover {
-	fill: $salmon;
+    fill: $salmon;
 }
-@media(max-width: 905px) {
+
+@media (max-width: 905px) {
     #mobile {
         display: inline;
         visibility: visible;
