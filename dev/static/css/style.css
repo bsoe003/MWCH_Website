@@ -41,7 +41,7 @@
 
 #storiesPreview {
   height: 280px;
-  background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
+  background: linear-gradient(rgba(255, 255, 252, 0.85), rgba(255, 255, 252, 0.85)), url("../img/bg_indexstory.jpg") no-repeat fixed;
   background-size: cover; }
 
 #story-content {
@@ -100,39 +100,34 @@
 .white-text {
   color: #FFFFFC; }
 
+#banner-wrapper {
+  padding-top: 50px; }
+
 /********* ABOUT PAGE ***********/
 #about {
-  height: 450px;
+  height: 300px;
+  /*overriden by about.js*/
   max-height: 1000px;
   margin-top: -40px;
-  background: linear-gradient(rgba(255, 255, 252, 0.9), rgba(255, 255, 252, 0.9)), url("../img/bg_pholder.jpg") no-repeat fixed;
+  background: linear-gradient(rgba(255, 255, 252, 0.85), rgba(255, 255, 252, 0.85)), url("../img/bg_about.jpg") no-repeat fixed;
   background-size: cover;
-  clear: both; }
+  clear: both;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: auto; }
 
-#mission {
+#mission, #history {
   width: 50%;
-  float: left; }
-  #mission p {
+  float: left;
+  height: 300px; }
+  #mission p, #history p {
     margin-left: auto;
     margin-right: auto;
     width: 70%; }
-    #mission p span {
-      font-size: 1em;
+    #mission p span, #history p span {
+      font-size: 16px;
       font-weight: 400; }
-
-#history {
-  width: 50%;
-  float: right; }
-  #history p {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%; }
-  #history span {
-    margin-left: auto;
-    margin-right: auto;
-    width: 70%;
-    font-size: 1em;
-    font-weight: 400; }
 
 #history:after {
   clear: both; }
@@ -381,6 +376,10 @@ form {
   margin-left: auto;
   padding-bottom: 90px; }
 
+#form-wrapper {
+  /* adds 50px to 100px of #wrapper */
+  padding-top: 50px; }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0; }
@@ -436,7 +435,7 @@ h1 {
 h2 {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 1.875em;
+  font-size: 2.5em;
   color: #D4C2D2;
   margin-bottom: 12px;
   margin-top: 0; }
@@ -480,7 +479,7 @@ p {
   border-bottom: 3px solid #D08B84; }
 
 #wrapper {
-  padding-top: 150px; }
+  padding-top: 100px; }
 
 #content {
   min-height: 100%; }
