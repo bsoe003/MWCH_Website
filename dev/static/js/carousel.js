@@ -9,6 +9,7 @@ $(document).ready(function() {
         autoplay: true,
         arrows: false,
         fade: true,
-        cssEase: 'linear'
+        cssEase: 'linear',
+        pauseOnHover: false
     });
 });
