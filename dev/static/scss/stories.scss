@@ -57,7 +57,7 @@ form {
 
 .bubble {
     position: relative;
-    width: 70%;
+    width: 75%;
     height: 80px;
     margin-top: 35px;
     color: white;
@@ -83,6 +83,7 @@ form {
 
 .leftBubble {
     background-color: $light-brown;
+    //float: left;
 }
 
 .leftBubble:after {
@@ -96,11 +97,12 @@ form {
     z-index: 1;
     left: -35px;
     top: 55px;
+    clear: both;
 }
 
 .rightBubble {
     background-color: $medium-brown;
-    margin-left: 30%;
+    margin-left: 25%;
 }
 
 .rightBubble:after {
@@ -114,6 +116,7 @@ form {
     z-index: 1;
     right: -35px;
     top: 55px;
+    clear: both;
 }
 
 .qmark {

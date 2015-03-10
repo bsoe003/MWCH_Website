@@ -459,7 +459,7 @@ form {
 
 .bubble {
   position: relative;
-  width: 70%;
+  width: 75%;
   height: 80px;
   margin-top: 35px;
   color: white;
@@ -494,11 +494,12 @@ form {
   width: 0;
   z-index: 1;
   left: -35px;
-  top: 55px; }
+  top: 55px;
+  clear: both; }
 
 .rightBubble {
   background-color: #6A5554;
-  margin-left: 30%; }
+  margin-left: 25%; }
 
 .rightBubble:after {
   content: '';
@@ -510,7 +511,8 @@ form {
   width: 0;
   z-index: 1;
   right: -35px;
-  top: 55px; }
+  top: 55px;
+  clear: both; }
 
 .qmark {
   font-family: 'Spirax'; }
