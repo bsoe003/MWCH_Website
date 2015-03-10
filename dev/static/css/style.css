@@ -26,11 +26,11 @@
   height: 380px;
   background-color: #FFFFFC; }
   #specials img, #locationHours img {
-    width: 60%;
+    width: 55%;
     height: 100%; }
 
 .blurb {
-  width: 40%;
+  width: 45%;
   height: 100%;
   background-color: #FFFFFC;
   text-align: center;
@@ -49,15 +49,22 @@
   width: 99%;
   text-align: center; }
 
-.story p {
-  width: 230px;
-  padding: 0px 3em;
-  display: inline-block; }
+.story {
+  min-height: 100px; }
+  .story p {
+    width: 230px;
+    padding: 5px 3em;
+    display: inline-block; }
+  .story .white-text {
+    vertical-align: top; }
+  .story .no-story {
+    vertical-align: middle; }
 
 #hours, #location {
   width: 200px;
   height: 45%;
-  display: inline-block; }
+  display: inline-block;
+  float: left; }
 
 #hours {
   padding-right: 10%; }

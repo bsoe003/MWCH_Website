@@ -40,16 +40,17 @@
     height: 380px;
     background-color: $off-white;
     img {
-        width: 60%;
+        width: 55%;
         height: 100%;
     }
 }
 
 .blurb {
-    width: 40%;
+    width: 45%;
     height: 100%;
     background-color: $off-white;
     text-align: center;
+    //display: inline;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,10 +71,17 @@
 }
 
 .story {
+    min-height: 100px;
     p {
         width: 230px;
-        padding: 0px 3em;
+        padding: 5px 3em;
         display: inline-block;
+    }
+    .white-text {
+        vertical-align: top;
+    }
+    .no-story {
+        vertical-align: middle;
     }
 }
 
@@ -86,6 +94,7 @@
     width: 200px;
     height: 45%;
     display: inline-block;
+    float: left;
 }
 
 #hours {

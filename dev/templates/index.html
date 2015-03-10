@@ -31,11 +31,19 @@
             <div id="story-content">
             	<h2>Your Stories</h2>
             	<div class="story">
-            		<p class="white-text">"Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods. Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods."</p>
+                    {% if not stories %}
+                    <p class="no-story">No stories have been submitted.</p>
+                    {% endif %}
+                    {% for i in range(3) %}
+                    {% if stories[i] %}
+                    <p class="white-text">"{{ stories[i].text }}"</p>
+                    {% endif %}
+                    {% endfor %}
+            		<!--<p class="white-text">"Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods. Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods."</p>
 
             		<p class="white-text">"Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods. Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods."</p>
                     
-            		<p class="white-text">"Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods. Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods."</p>
+            		<p class="white-text">"Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods. Here will be a preview of a story of a previous customer/previous Muirista detailing the experience they had at Muir Woods."</p>-->
             	</div>
             </div>
         </div>

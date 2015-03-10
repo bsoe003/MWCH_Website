@@ -1,12 +1,5 @@
 $(document).ready(function() {
-    adjustAbout();
     centerBio();
-
-    function adjustAbout() {
-        //console.log($("#history").height());
-        console.log($("#about").height());
-        //$("#about").height($("#history").height()+);
-    }
 
     function centerBio() {
         var args = [];
@@ -26,7 +19,6 @@ $(document).ready(function() {
     }
 
     $(window).resize(function() {
-        adjustAbout();
         centerBio();
     });
 });
