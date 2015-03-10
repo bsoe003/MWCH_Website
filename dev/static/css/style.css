@@ -26,11 +26,11 @@
   height: 380px;
   background-color: #FFFFFC; }
   #specials img, #locationHours img {
-    width: 50%;
+    width: 60%;
     height: 100%; }
 
 .blurb {
-  width: 50%;
+  width: 40%;
   height: 100%;
   background-color: #FFFFFC;
   text-align: center;
@@ -70,8 +70,7 @@
 #icons {
   width: 100%;
   background-color: #FFFFFC;
-  padding-top: 70px;
-  padding-bottom: 70px; }
+  padding: 70px 0px; }
 
 #icon-content {
   margin-left: auto;
@@ -181,7 +180,7 @@
 
 #sources {
   clear: both;
-  background-color: #F9F7F1;
+  background-color: #FFFFFC;
   padding-top: 50px;
   padding-bottom: 50px; }
 
