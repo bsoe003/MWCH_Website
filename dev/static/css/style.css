@@ -1,7 +1,7 @@
 /*************** VARIABLES ***/
 /*************** INDEX PAGE ***/
 #banner {
-  background: #FFFFFC url("../img/banner_placeholder.jpg") no-repeat;
+  background: #FFFFFC url("../img/banner.png") no-repeat;
   background-size: cover;
   width: 100%;
   min-height: 400px;
@@ -395,7 +395,11 @@ figure.effect-bubba:hover p {
   width: 370px;
   float: left; }
 
-.pic-1, .pic-2, .pic-4, .pic-7 {
+.pic-1 {
+  margin-right: 30px;
+  margin-bottom: 39px; }
+
+.pic-2, .pic-4, .pic-7 {
   margin-right: 30px;
   margin-bottom: 30px; }
 
