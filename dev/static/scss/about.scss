@@ -26,9 +26,10 @@
 #mission {
     width: 50%;
     float: left;
-    //height: 300px;
+ //   height: 300px;
+    padding: 0px 100px;
     p {
-        @include center(75%);
+ //     @include center(75%);
         span {
             font-size: 16px;
             font-weight: 400;
@@ -49,6 +50,9 @@
 #muiristasBio {
     clear: both;
     padding-top: 50px;
+    h2 {
+        text-align: center;
+    }
 }
 
 #muiristasContent {
@@ -111,6 +115,9 @@
     background-color: $off-white;
     padding-top: 50px;
     padding-bottom: 50px;
+    h2 {
+        text-align: center;
+    }
 }
 
 #centerSources {

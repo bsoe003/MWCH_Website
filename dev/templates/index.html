@@ -32,7 +32,7 @@
             	<h2>Your Stories</h2>
             	<div class="story">
                     {% if not stories %}
-                    <p class="no-story">No stories have been submitted.</p>
+                    <p class="no-story">No stories have been submitted. <br/> <a href="/stories">Tell us your Muir Woods story here.</a></p>
                     {% endif %}
                     {% for i in range(3) %}
                     {% if stories[i] %}
