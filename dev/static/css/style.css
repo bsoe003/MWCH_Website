@@ -371,8 +371,7 @@ figure.effect-bubba:hover p {
   background-color: #464c44;
   background-size: contain;
   width: inherit;
-  padding: 10px;
-  margin-bottom: 100px; }
+  padding: 10px; }
 
 #menuImg {
   background: url("../img/menu.png");
