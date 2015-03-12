@@ -231,13 +231,8 @@ table {
   float: left;
   /*    overflow: hidden;
   margin: 10px 1%;*/
-<<<<<<< HEAD
-  width: 400px;
-  max-height: 267px;
-=======
   width: 350px;
   max-height: 234px;
->>>>>>> dyee
   background: #3085a3;
   text-align: center;
   cursor: pointer; }
@@ -484,6 +479,8 @@ form {
   height: 80px;
   padding-left: 10px;
   padding-right: 10px;
+  margin-left: auto;
+  margin-right: auto;
   position: relative;
   display: table-cell;
   vertical-align: middle; }
@@ -506,7 +503,7 @@ form {
 
 .rightBubble {
   background-color: #6A5554;
-  margin-left: 25%; }
+  margin-left: 22.5%; }
 
 .rightBubble:after {
   content: '';
@@ -517,7 +514,7 @@ form {
   display: block;
   width: 0;
   z-index: 1;
-  right: -35px;
+  right: -34px;
   top: 55px;
   clear: both; }
 

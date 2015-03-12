@@ -76,6 +76,8 @@ form {
     height: 80px;
     padding-left: 10px;
     padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     display: table-cell;
     vertical-align: middle;
@@ -102,7 +104,7 @@ form {
 
 .rightBubble {
     background-color: $medium-brown;
-    margin-left: 25%;
+    margin-left: 22.5%;
 }
 
 .rightBubble:after {
@@ -114,7 +116,7 @@ form {
     display: block;
     width: 0;
     z-index: 1;
-    right: -35px;
+    right: -34px;
     top: 55px;
     clear: both;
 }
