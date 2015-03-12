@@ -33,7 +33,16 @@
   text-align: center;
   display: flex;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  display: -webkit-flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  display: -moz-flex;
+  -moz-justify-content: center;
+  -moz-align-items: center;
+  display: -ms-flex;
+  -ms-justify-content: center;
+  -ms-align-items: center; }
 
 #storiesPreview {
   padding: 70px 0px;
@@ -126,6 +135,9 @@ table {
   background-size: cover;
   clear: both;
   display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
   overflow-x: hidden;
   padding-top: 40px;
   padding-bottom: 40px; }
@@ -178,6 +190,8 @@ table {
   display: table-cell;
   vertical-alignment: middle;
   -webkit-animation: fadeIn 0.5s;
+  -moz-animation: fadeIn 0.5s;
+  -ms-animation: fadeIn 0.5s;
   animation: fadeIn 0.5s; }
 
 .muiristaText {
@@ -249,6 +263,8 @@ table {
   text-transform: uppercase;
   font-size: 1em;
   -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -ms-backface-visibility: hidden;
   backface-visibility: hidden; }
 
 .grid figure figcaption::before,
@@ -515,7 +531,7 @@ form {
 
 .rightBubble {
   background-color: #8D6E63;
-  margin-left: 22.5%; }
+  margin-left: 20%; }
 
 .rightBubble:after {
   content: '';

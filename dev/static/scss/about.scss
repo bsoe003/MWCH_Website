@@ -16,6 +16,9 @@
     background-size: cover;
     clear: both;
     display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
     //justify-content: center;
     //align-items: center;
     overflow-x: hidden;
@@ -91,6 +94,8 @@
     display: table-cell;
     vertical-alignment: middle;
     -webkit-animation: fadeIn 0.5s;
+    -moz-animation: fadeIn 0.5s;
+    -ms-animation: fadeIn 0.5s;
     animation: fadeIn 0.5s;
 }
 
@@ -171,6 +176,8 @@ margin: 10px 1%;*/
     text-transform: uppercase;
     font-size: 1em;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+    -ms-backface-visibility: hidden;
     backface-visibility: hidden;
 }
 

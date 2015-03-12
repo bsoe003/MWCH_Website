@@ -22,7 +22,8 @@
         </form>
     </div>
     <div id="story-container">
-        <!-- <h1>Your Stories</h1>  -->{% for i in range(stories|length) %}
+        <!-- <h1>Your Stories</h1>  -->
+        {% for i in range(stories|length) %}
         <div class="bubble {% if i%2 == 0 %}leftBubble{% else %}rightBubble{% endif %}">
             <div class="storyholder">
                 <span class="qmark">“</span>&nbsp;{{ stories[i].text }}&nbsp;<span class="qmark">”</span>

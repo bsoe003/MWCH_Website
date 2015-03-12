@@ -50,6 +50,15 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    display: -webkit-flex;
+    -webkit-justify-content: center;
+    -webkit-align-items: center;
+    display: -moz-flex;
+    -moz-justify-content: center;
+    -moz-align-items: center;
+    display: -ms-flex;
+    -ms-justify-content: center;
+    -ms-align-items: center;
 }
 
 // Stories section

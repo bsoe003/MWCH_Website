@@ -63,7 +63,7 @@ $(document).ready(function() {
         if (footerTop < docHeight) {
             if ($(".selected").text().trim() == "YOUR STORIES") {
                 $("#story-container").css({
-                    "height": $(window).height() - 420 + 'px'
+                    "height": $(window).height() - 400 + 'px'
                 });
                 return;
             }
