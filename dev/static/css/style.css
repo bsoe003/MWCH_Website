@@ -422,10 +422,6 @@ figure.effect-bubba:hover p {
   margin-right: 30px;
   margin-bottom: 30px; }
 
-.pic-5 {
-  float: right;
-  margin-bottom: 30px; }
-
 .row {
   height: 450px; }
 
@@ -439,6 +435,12 @@ figure.effect-bubba:hover p {
   width: 674px;
   height: auto;
   margin-right: 30px;
+  margin-bottom: 30px; }
+
+.pic-5 {
+  width: 283px;
+  height: auto;
+  float: right;
   margin-bottom: 30px; }
 
 .pic-6 {
