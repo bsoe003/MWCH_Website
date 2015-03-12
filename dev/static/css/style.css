@@ -231,13 +231,8 @@ table {
   float: left;
   /*    overflow: hidden;
   margin: 10px 1%;*/
-<<<<<<< HEAD
-  width: 400px;
-  max-height: 267px;
-=======
   width: 350px;
   max-height: 234px;
->>>>>>> dyee
   background: #3085a3;
   text-align: center;
   cursor: pointer; }
@@ -294,7 +289,7 @@ table {
 /***** Bubba *****/
 /*---------------*/
 figure.effect-bubba {
-  background: #9e5406;
+  background: #333333;
   width: 350px;
   height: auto; }
 
@@ -414,6 +409,14 @@ figure.effect-bubba:hover p {
 .row {
   height: 450px; }
 
+.pic-3 {
+  width: 587px;
+  height: auto; }
+
+.pic-4 {
+  width: 674px;
+  height: auto; }
+
 /*************** VARIABLES ***/
 #story_form {
   width: 100%;
@@ -489,14 +492,14 @@ form {
   vertical-align: middle; }
 
 .leftBubble {
-  background-color: #877770; }
+  background-color: #A1887F; }
 
 .leftBubble:after {
   content: '';
   position: absolute;
   border-style: solid;
   border-width: 15px 35px 15px 0;
-  border-color: transparent #877770;
+  border-color: transparent #A1887F;
   display: block;
   width: 0;
   z-index: 1;
@@ -505,7 +508,7 @@ form {
   clear: both; }
 
 .rightBubble {
-  background-color: #6A5554;
+  background-color: #8D6E63;
   margin-left: 25%; }
 
 .rightBubble:after {
@@ -513,7 +516,7 @@ form {
   position: absolute;
   border-style: solid;
   border-width: 15px 0 15px 35px;
-  border-color: transparent #6A5554;
+  border-color: transparent #8D6E63;
   display: block;
   width: 0;
   z-index: 1;
