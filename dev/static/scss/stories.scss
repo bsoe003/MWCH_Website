@@ -2,7 +2,7 @@
 
 #story_form {
     width: 100%;
-    background-color: $light-purple;
+    background-color: $dark-blue;
     height: 55px;
     padding-top: 15px;
     cursor: pointer;
@@ -124,7 +124,7 @@ form {
 }
 
 #story-background {
-    background: linear-gradient(rgba(255, 255, 252, 0.75), rgba(255, 255, 252, 0.75)), url("../img/bg_pholder.jpg") no-repeat fixed;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg_pholder.jpg") no-repeat fixed;
     background-size: cover;
 }
 
