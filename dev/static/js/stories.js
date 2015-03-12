@@ -68,4 +68,8 @@ $(document).ready(function() {
     $("#q").keydown(function() {
         charCheck();
     });
+
+    $("#story-popup").velocity({
+        "top": ($(window).height()/2)-($("#story-popup > img").height()/2)
+    }, 750).delay(1100).fadeOut(750);
 });

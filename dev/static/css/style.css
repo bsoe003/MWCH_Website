@@ -547,6 +547,16 @@ form {
   /* adds 50px to 100px of #wrapper */
   padding-top: 50px; }
 
+#story-popup {
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  z-index: 9999;
+  top: -250px;
+  color: #FFFFFC; }
+  #story-popup img {
+    width: 30%; }
+
 @-webkit-keyframes fadeIn {
   from {
     opacity: 0; }
