@@ -411,14 +411,18 @@ figure.effect-bubba:hover p {
   float: left; }
 
 .pic-1 {
+  width: 370px;
+  height: auto;
   margin-right: 30px;
   margin-bottom: 39px; }
 
-.pic-2, .pic-7 {
+.pic-2 {
+  width: 370px;
+  height: auto;
   margin-right: 30px;
   margin-bottom: 30px; }
 
-.pic-5, .pic-6, .pic-8 {
+.pic-5 {
   float: right;
   margin-bottom: 30px; }
 
@@ -435,6 +439,23 @@ figure.effect-bubba:hover p {
   width: 674px;
   height: auto;
   margin-right: 30px;
+  margin-bottom: 30px; }
+
+.pic-6 {
+  width: 1000px;
+  height: auto;
+  float: right;
+  margin-bottom: 30px; }
+
+.pic-7 {
+  width: 283px;
+  height: auto;
+  margin-right: 30px; }
+
+.pic-8 {
+  width: 674px;
+  height: auto;
+  float: right;
   margin-bottom: 30px; }
 
 /*************** VARIABLES ***/
