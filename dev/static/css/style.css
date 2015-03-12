@@ -12,8 +12,7 @@
   padding-bottom: 70px;
   background-color: #FFFFFC; }
   #debrief p {
-    font-size: 1.25em;
-    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    font-size: 1.5em;
     line-height: 1.625em;
     text-align: center;
     margin-left: auto;
@@ -30,7 +29,7 @@
 .blurb {
   width: 45%;
   height: 100%;
-  background-color: #EFEBE9;
+  background-color: #D7CCC8;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -66,17 +65,23 @@
 
 #hours, #location {
   width: 200px;
-  height: 45%;
+  height: 237px;
   display: inline-block;
   float: left; }
 
 #hours {
-  padding-right: 10%; }
-  #hours p {
-    display: inline-block; }
+  padding-right: 35px; }
 
 #day {
   padding-right: 15px; }
+
+table {
+  border: none;
+  text-align: left; }
+
+.td-col1 {
+  padding-right: 18px;
+  font-weight: 700; }
 
 #icons {
   width: 100%;
@@ -183,7 +188,7 @@
   font-size: 1em; }
 
 .muiristaName {
-  font-weight: 400; }
+  font-weight: 700; }
 
 .muiristaTitle {
   font-size: 0.85em; }
@@ -408,7 +413,7 @@ figure.effect-bubba:hover p {
 /*************** VARIABLES ***/
 #story_form {
   width: 100%;
-  background-color: #F6F3F3;
+  background-color: #8BBEC1;
   height: 55px;
   padding-top: 15px;
   cursor: pointer; }
@@ -516,7 +521,7 @@ form {
   font-family: 'Spirax'; }
 
 #story-background {
-  background: linear-gradient(rgba(255, 255, 252, 0.75), rgba(255, 255, 252, 0.75)), url("../img/bg_pholder.jpg") no-repeat fixed;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg_pholder.jpg") no-repeat fixed;
   background-size: cover; }
 
 #story-container {
@@ -594,9 +599,9 @@ h1 {
 
 h2 {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 2.5em;
-  color: #A1887F;
+  color: #8D6E63;
   margin-bottom: 12px;
   margin-top: 0; }
 

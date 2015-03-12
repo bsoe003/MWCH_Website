@@ -22,8 +22,8 @@
     padding-bottom: 70px;    
     background-color: $off-white;
     p {
-        font-size: 1.25em;
-        font-family: $header-link-font;
+        font-size: 1.5em;
+        //font-family: $header-link-font;
         line-height: 1.625em;
         text-align: center;
         @include center(50%);
@@ -44,7 +44,7 @@
 .blurb {
     width: 45%;
     height: 100%;
-    background-color: #EFEBE9;
+    background-color: #D7CCC8;
     text-align: center;
     //display: inline;
     display: flex;
@@ -96,20 +96,27 @@
 
 #hours, #location {
     width: 200px;
-    height: 45%;
+    height: 237px;
     display: inline-block;
     float: left;
 }
 
 #hours {
-    padding-right: 10%;
-    p {
-        display: inline-block;
-    }
+    padding-right: 35px;
 }
 
 #day {
     padding-right: 15px;
+}
+
+table {
+    border: none;
+    text-align: left;
+}
+
+.td-col1 {
+    padding-right: 18px;
+    font-weight: 700;
 }
 
 // Icons section
