@@ -4,11 +4,13 @@
 <script type="text/javascript" src="js/stories.js"></script>
 {% endblock %}
 {% block content %}
+
 {%- with messages = get_flashed_messages() -%}
 {%- if messages -%}
-<div id="story-popup">
+<!-- Submission Confirmation here -->
+<!--<div id="story-popup">
     <img src="img/popup.png"/>
-</div>
+</div>-->
 {%- endif -%}
 {%- endwith -%}
 
