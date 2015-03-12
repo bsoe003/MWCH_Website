@@ -21,15 +21,6 @@
     <script type="text/javascript" src="js/velocity.min.js"></script>
     <script type="text/javascript" src="slick/slick.min.js"></script>
     {% endblock %}
-
-    {%- with messages = get_flashed_messages() -%}
-    {%- if messages -%}
-    <script type="text/javascript">
-    alert("{{ messages[0] }}");
-    </script>
-    {%- endif -%}
-    {%- endwith -%}
-
     <title>Muir Woods Coffee House</title>
 </head>
 
