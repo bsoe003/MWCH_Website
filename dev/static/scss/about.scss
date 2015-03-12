@@ -141,7 +141,7 @@
     position: relative;
     margin: 0 auto;
     padding: 1em 0 1em;
-    max-width: 1400px;
+    max-width: 975px;
     list-style: none;
     text-align: center;
 }
@@ -151,8 +151,8 @@
     float: left;
 /*    overflow: hidden;
 margin: 10px 1%;*/
-    width: 250px;
-    max-height: 167px;
+    width: 400px;
+    max-height: auto;
     background: #3085a3;
     text-align: center;
     cursor: pointer;
@@ -219,13 +219,13 @@ margin: 10px 1%;*/
 /*---------------*/
 figure.effect-bubba {
     background: #9e5406;
-    width: 250px;
+    width: 400px;
     height: auto;
 }
 
 figure.effect-bubba img {
     opacity: 1.0;
-    width: 250px;
+    width: 400px;
     height: auto;
     -webkit-transition: opacity 0.35s;
     transition: opacity 0.35s;
