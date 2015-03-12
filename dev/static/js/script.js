@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     function shrink() {
         $("header").velocity({
-            opacity: 0.95,
+            opacity: 0.90,
             height: 70
         }, duration);
         $("#nav").velocity({
