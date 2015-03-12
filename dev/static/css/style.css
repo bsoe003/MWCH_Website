@@ -12,7 +12,9 @@
   padding-bottom: 70px;
   background-color: #FFFFFC; }
   #debrief p {
-    font-size: 1.125em;
+    font-size: 1.25em;
+    font-family: "Montserrat", "Helvetica Neue", sans-serif;
+    line-height: 1.625em;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -28,7 +30,7 @@
 .blurb {
   width: 45%;
   height: 100%;
-  background-color: #FCF8F5;
+  background-color: #EFEBE9;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -128,8 +130,8 @@
   float: left;
   padding: 0px 100px; }
   #mission p span, #history p span {
-    font-size: 16px;
-    font-weight: 400; }
+    font-size: 19px;
+    font-weight: 700; }
 
 #history:after {
   clear: both; }
@@ -388,7 +390,8 @@ figure.effect-bubba:hover p {
 .container {
   width: 1000px;
   margin-left: auto;
-  margin-right: auto; }
+  margin-right: auto;
+  padding-top: 50px; }
 
 .firstRow {
   height: 587px; }
@@ -561,7 +564,7 @@ html, body {
   font-family: "Lato", "Helvetica Neue", sans-serif;
   font-size: 100%;
   color: #333333;
-  font-weight: 300;
+  font-weight: 400;
   background-color: #FFFFFC;
   margin: 0;
   padding: 0; }
@@ -595,24 +598,26 @@ h1 {
 
 h1 {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
-  font-weight: 400;
+  font-weight: 700;
   font-size: 4em;
-  color: #AAD1CE; }
+  letter-spacing: -1px;
+  color: #8BBEC1; }
 
 h2 {
   font-family: "Montserrat", "Helvetica Neue", sans-serif;
   font-weight: 400;
   font-size: 2.5em;
-  color: #D4C2D2;
+  color: #A1887F;
   margin-bottom: 12px;
   margin-top: 0; }
 
 p {
   font-family: "Lato", "Helvetica Neue", sans-serif;
-  font-weight: 300;
-  font-size: 0.875em;
+  font-weight: 400;
+  font-size: 1em;
   color: #333333;
-  margin: 0; }
+  margin: 0;
+  line-height: 1.375em; }
 
 #logo {
   float: left;
