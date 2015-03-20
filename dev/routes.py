@@ -46,13 +46,12 @@ def viewStories():
         db.session.add(story)
         db.session.commit()
         print "Saved to Database"
-        msg = Message("Hi 187B Graders",
-            sender="NoSLP",
-            recipients=["kirsh@ucsd.edu", "2flcastro@gmail.com", "adam@powe.rs", "huang.katie94@gmail.com"],
-            cc=["brian.soe003@gmail.com", "dhyee@ucsd.edu", "cvd001@ucsd.edu"])
-        #    recipients=["kirsh@ucsd.edu", "2flcastro@gmail.com", "adam@powe.rs", "huang.katie94@gmail.com", "bsoe@ucsd.edu", "cvd001@ucsd.edu", "dhyee@ucsd.edu"])
-        msg.html = 'We can tell that you are grading our project right now! Thank you for all your hard work, and have a great spring break!'
-        mail.send(msg)
+        #msg = Message("Hi 187B Graders",
+        #    sender="NoSLP",
+        #    recipients=["kirsh@ucsd.edu", "2flcastro@gmail.com", "adam@powe.rs", "huang.katie94@gmail.com"],
+        #    cc=["brian.soe003@gmail.com", "dhyee@ucsd.edu", "cvd001@ucsd.edu"])
+        #msg.html = 'We can tell that you are grading our project right now! Thank you for all your hard work, and have a great spring break!'
+        #mail.send(msg)
         flash(u'Your story has been submitted.', 'success')
         return redirect('/stories')
     stories = Stories.query.filter(Stories.approval) \
