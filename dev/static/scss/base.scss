@@ -56,7 +56,7 @@ html, body {
 }
 
 header {
-    font-family: $header-link-font;
+    font-family: $nav-font;
     background-color: $off-white;
     font-size: 15px;
     position: fixed;
@@ -88,18 +88,18 @@ h1/*, h2, p*/ {
 
 h1 {
     font-family: $header-link-font;
-    font-weight: 700;
-    font-size: 4em;
-    letter-spacing: -1px;
-    color: $dark-blue;
+    font-weight: 400;
+    font-size: 4.5em;
+    color: #57866D;
+    transform: translateY(25px);
     //display: inline-block;
     //border-bottom: 5px solid $dark-blue;
 }
 
 h2 {
     font-family: $header-link-font;
-    font-weight: 700;
-    font-size: 2.5em;
+    font-weight: 400;
+    font-size: 2.8em;
     color: $light-brown;
     margin-bottom: 12px;
     margin-top: 0;
@@ -144,12 +144,12 @@ p {
 }
 
 .option > a:hover, .selected {
-    color: $salmon;
-    /*border-bottom: 3px solid $salmon;*/
+    color: $green;
+    /*border-bottom: 3px solid $green;*/
 }
 
 .selected {
-    border-bottom: 3px solid $salmon;
+    border-bottom: 3px solid $green;
 }
 
 #wrapper {
@@ -203,7 +203,7 @@ p {
 }
 
 #mobile > svg:hover {
-    fill: $salmon;
+    fill: $green;
 }
 
 @media (max-width: 905px) {
@@ -215,4 +215,11 @@ p {
         display: none;
         visibility: hidden;
     }
+}
+
+#container {
+  width: 100%;
+  // margin-right: auto;
+  // margin-left: auto;
+  // background-color: $bg-brown;
 }

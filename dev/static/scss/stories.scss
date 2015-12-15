@@ -2,7 +2,7 @@
 
 #story_form {
     width: 100%;
-    background-color: $dark-blue;
+    background-color: #eee;
     height: 55px;
     padding-top: 15px;
     cursor: pointer;
@@ -30,14 +30,15 @@ form {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
-    border: 1px solid #ababab;
+    border: 1px solid $green;
     margin-top: 5px;
-    background-color: #f9f7f1;
+    background-color: $green;
     font-family: inherit;
     font-size: inherit;
-    font-weight: bold;
+    //font-weight: bold;
     cursor: pointer;
-    color: #635b53;
+    color: $off-white;
+    box-shadow: 3px 3px 5px #ddd;
 }
 
 #q {
@@ -63,13 +64,14 @@ form {
     color: white;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
-    border-radius: 5px;
+    border-radius: 20px;
     padding: 15px 15px 15px 15px;
     display: table;
+    box-shadow: 2px 2px 5px #333;
 }
 
 .storyholder {
-    border: 1px solid $off-white;
+//    border: 1px solid $off-white;
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
@@ -97,7 +99,7 @@ form {
     display: block;
     width: 0;
     z-index: 1;
-    left: -35px;
+    left: -34px;
     top: 55px;
     clear: both;
 }

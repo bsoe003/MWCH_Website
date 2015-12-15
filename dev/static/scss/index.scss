@@ -8,25 +8,49 @@
 }
 
 #banner {
-    background: $off-white url("../img/banner.png") no-repeat;
+    background: $off-white url("../img/banner.jpg") no-repeat;
     background-size: cover;
-    width: 100%;
-    min-height: 400px;
-    border-bottom: 4px solid $dark-blue;
+//    width: 100%;
+    height: 100vh;
+//    min-height: 650px;
+    background-position: center center;
+}
+
+#welcome_text {
+  font-family: $header-link-font;
+  font-weight: 400;
+  font-size: 4em;
+  color: #57866D;
+  margin-bottom: 15px;
+}
+
+#banner_text {
+  text-align: center;
+  position: relative;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
+  top: 40%;
+  text-shadow: 0 0 6px #111111;
+  p {
+    font-size: 1.5em;
+    color: white;
+  }
 }
 
 // First Section
 #debrief {
 //    height: 200px;
     padding-top: 70px;
-    padding-bottom: 70px;    
+    padding-bottom: 70px;
     background-color: $off-white;
+    text-align: center;
     p {
         font-size: 1.5em;
-        //font-family: $header-link-font;
         line-height: 1.625em;
+        character-spacing: 0.5px;
         text-align: center;
-        @include center(50%);
+        @include center(53%);
 //        @extend %vertical-align;
     }
 }
@@ -44,7 +68,7 @@
 .blurb {
     width: 45%;
     height: 100%;
-    background-color: #EFEBE9;
+    background-color: #464C44;
     text-align: center;
     //display: inline;
     display: flex;
@@ -64,7 +88,7 @@
 // Stories section
 #storiesPreview {
 //    height: 280px;
-    padding: 70px 0px;
+    padding: 90px 0px;
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/bg_indexstory.jpg") no-repeat fixed;
     background-size: cover;
 }
@@ -90,7 +114,7 @@
         vertical-align: middle;
         color: $off-white;
         a {
-            color: $salmon;
+            color: $green;
         }
         a:hover {
             color: $light-blue;
@@ -101,6 +125,7 @@
 // Location and Hours section
 #locationHours {
     @extend #specials;
+    color: $off-white;
 }
 
 #hours, #location {

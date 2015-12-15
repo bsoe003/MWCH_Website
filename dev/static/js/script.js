@@ -12,7 +12,7 @@ $(document).ready(function() {
 
     function shrink() {
         $("header").velocity({
-            opacity: 0.90,
+            opacity: 0.9,
             height: 70
         }, duration);
         $("#nav").velocity({
@@ -48,7 +48,7 @@ $(document).ready(function() {
             height: 100
         }, duration);
         $(".selected").css({
-            "border-bottom": "3px solid #D08B84"
+            "border-bottom": "3px solid #279E8B"
         });
         $("#mobile").velocity({
             marginTop: "55px"

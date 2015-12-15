@@ -115,6 +115,14 @@
     font-size: 0.85em;
 }
 
+hr {
+  width: 30%;
+  opacity: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  border: 1px solid rgba(188, 170, 164, 0.1);
+}
+
 #sources {
     clear: both;
     background-color: $off-white;
@@ -127,6 +135,7 @@
 
 #centerSources {
     padding-top: 25px;
+    text-shadow: 0 0 6px #111111;
     /*position: absolute;
     left: 50%;
     right: 50%;
@@ -173,7 +182,7 @@ margin: 10px 1%;*/
 
 .grid figure figcaption {
     color: #fff;
-    text-transform: uppercase;
+//    text-transform: uppercase;
     font-size: 1em;
     -webkit-backface-visibility: hidden;
     -moz-backface-visibility: hidden;
@@ -208,10 +217,11 @@ margin: 10px 1%;*/
     color: #fff;
     font-size: 2em;
     font-weight: 50;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-
-.grid figure h2,
 .grid figure p {
     margin: 0;
 }

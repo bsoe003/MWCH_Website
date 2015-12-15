@@ -1,15 +1,17 @@
 /*************** VARIABLES ***/
 
 // PRIMARY COLORS VARIABLES
+$bg-brown: #EFEBE9;
 $off-white: #FFFFFC;
 $off-black: #333333;
 $light-blue: #AAD1CE;
 $dark-blue: #8BBEC1;
 $lilac: #D4C2D2;
 $salmon: #D08B84;
+$green: #008B7B;
 
 // SECONDARY COLORS VARIABLES
-$light-brown: #A1887F;
+$light-brown: #BCAAA4;
 $medium-brown: #8D6E63;
 $dark-brown: #56504C;
 $tan: #F9F7F1;
@@ -17,8 +19,9 @@ $light-purple: #F6F3F3;
 $brown: #8D6E63;
 
 // FONTS STACKS
-$body-font: "Lato", "Helvetica Neue", sans-serif;
-$header-link-font: "Montserrat", "Helvetica Neue", sans-serif;
+$body-font: "Hind", "Helvetica Neue", sans-serif;
+$header-link-font: "Fredericka the Great", "Helvetica Neue", sans-serif;
+$nav-font: "Montserrat", "Helvetica Neue", sans-serif;
 
 // PLACEHOLDER SELECTORS
 %vertical-align {
