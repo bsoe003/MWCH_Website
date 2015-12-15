@@ -3,13 +3,13 @@
 #banner {
   background: #FFFFFC url("../img/banner.jpg") no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   background-position: center center; }
 
 #welcome_text {
   font-family: "Fredericka the Great", "Helvetica Neue", sans-serif;
   font-weight: 400;
-  font-size: 4em;
+  font-size: 3.8em;
   color: #57866D;
   margin-bottom: 15px; }
 
@@ -33,11 +33,10 @@
   #debrief p {
     font-size: 1.5em;
     line-height: 1.625em;
-    character-spacing: 0.5px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
-    width: 53%; }
+    width: 65%; }
 
 #specials, #locationHours {
   height: 380px;
@@ -126,7 +125,7 @@ table {
   width: 90%;
   text-align: center; }
   #icon-content p {
-    width: 45%;
+    width: 50%;
     display: inline-block; }
 
 #icon-logo {
