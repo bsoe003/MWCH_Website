@@ -1,7 +1,7 @@
 /*************** VARIABLES ***/
 /*************** INDEX PAGE ***/
 #banner {
-  background: #FFFFFC url("../img/banner.jpg") no-repeat;
+  background: #FFFFFC url("../img/banner2.jpg") no-repeat;
   background-size: cover;
   height: 90vh;
   background-position: center center; }
@@ -39,7 +39,7 @@
     width: 65%; }
 
 #specials, #locationHours {
-  height: 380px;
+  height: 430px;
   background-color: #FFFFFC; }
   #specials img, #locationHours img {
     width: 55%;
