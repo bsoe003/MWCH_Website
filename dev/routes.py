@@ -40,19 +40,19 @@ def viewMenu():
 def viewStories():
     Stories = models.Stories
     if request.method == 'POST':
-        text = request.form['q']
-        date = datetime.now().strftime('%m/%d/%Y')
-        story = Stories(date=datetime.now(), text=text, approval=True)
-        db.session.add(story)
-        db.session.commit()
-        print "Saved to Database"
-        #msg = Message("Hi 187B Graders",
-        #    sender="NoSLP",
-        #    recipients=["kirsh@ucsd.edu", "2flcastro@gmail.com", "adam@powe.rs", "huang.katie94@gmail.com"],
-        #    cc=["brian.soe003@gmail.com", "dhyee@ucsd.edu", "cvd001@ucsd.edu"])
-        #msg.html = 'We can tell that you are grading our project right now! Thank you for all your hard work, and have a great spring break!'
-        #mail.send(msg)
-        flash(u'Your story has been submitted.', 'success')
+        # text = request.form['q']
+        # date = datetime.now().strftime('%m/%d/%Y')
+        # story = Stories(date=datetime.now(), text=text, approval=True)
+        # db.session.add(story)
+        # db.session.commit()
+        # print "Saved to Database"
+        # #msg = Message("Hi 187B Graders",
+        # #    sender="NoSLP",
+        # #    recipients=["kirsh@ucsd.edu", "2flcastro@gmail.com", "adam@powe.rs", "huang.katie94@gmail.com"],
+        # #    cc=["brian.soe003@gmail.com", "dhyee@ucsd.edu", "cvd001@ucsd.edu"])
+        # #msg.html = 'We can tell that you are grading our project right now! Thank you for all your hard work, and have a great spring break!'
+        # #mail.send(msg)
+        # flash(u'Your story has been submitted.', 'success')
         return redirect('/stories')
     stories = Stories.query.filter(Stories.approval) \
         .order_by('date desc').all()

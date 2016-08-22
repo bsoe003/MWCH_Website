@@ -59,6 +59,14 @@ $(document).ready(function() {
             alert("Please write your story");
             return false;
         }
+        alert("Due to massive spamming, sharing stories feature is disabled. We greatly apologize :(");
+        return false;
+    });
+
+    $('form').submit(function(event) {
+        event.preventDefault();
+        alert("Due to massive spamming, sharing stories feature is disabled. We greatly apologize :(");
+        return false;
     });
 
     $("#q").keyup(function() {
